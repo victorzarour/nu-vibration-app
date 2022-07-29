@@ -1,4 +1,3 @@
-import Banner from "./Banner";
 import Row from "./Row";
 
 const Home = ( { albums } ) => {
@@ -22,7 +21,6 @@ const Home = ( { albums } ) => {
   return (
 
     <div>
-        <Banner />
         <Row title="Highest Rated" albums={highestRated} />
         <Row title="Pop" albums={pop} />
         <Row title="Latin" albums={latin} />
