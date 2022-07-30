@@ -1,16 +1,14 @@
 import { FormInputLabel, Input, Group } from '../styled/SignupForm.styles';
 
-const FormInput = ({ label, ...otherProps }) => {
+export const FormInput = ({ label, ...otherProps }) => {
   return (
     <Group>
       <Input {...otherProps} />
       {label && (
-        <FormInputLabel shrink={otherProps.value.length}>
+        <FormInputLabel shrink={otherProps.value?.length || 0}>
           {label}
         </FormInputLabel>
       )}
     </Group>
   );
 };
-
-export default FormInput;

@@ -11,7 +11,7 @@ import LoginForm from './components/LoginForm';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
-  const [errors, setErrors] = useState(false);
+  const [errors, ] = useState(false);
 
 // make sure user is authorized and authenticated
 useEffect(() => {
@@ -34,7 +34,7 @@ if(errors) return <h1>{errors}</h1>
   return (
     <div>
       <Sidebar />
-      { currentUser ? <h1>Render current username</h1> : <><a href="/signup">Sign Up</a></> }
+      { currentUser ? currentUser.username : <><a href="/signup">Sign Up</a> <a href="/login">Login</a></> }
        <Switch>
           <Route exact path="/">
             <Home />
@@ -50,7 +50,7 @@ if(errors) return <h1>{errors}</h1>
           </Route>
 
           <Route exact path="/login">
-            <LoginForm />
+            <LoginForm setUser={ setUser }/>
           </Route>
           <Route exact path="/signup">
             <SignupForm />

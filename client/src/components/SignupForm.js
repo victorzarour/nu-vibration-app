@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import FormInput from "../components/FormInput";
-import Button from "./Button";
+import { FormInput } from "./FormInput";
+import { Button } from "./Button";
 import { SignUpContainer } from "../styled/SignupForm.styles";
+
+// TO DO GET ERRORS TO DISPLAY ON PAGE
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +15,7 @@ const SignupForm = () => {
     confirmPassword: "",
   });
 
-  const [errors, setErrors] = useState([]);
+  const [ , setErrors] = useState([]);
   const history = useHistory();
 
   const { username, email, password, confirmPassword } = formData;
@@ -26,19 +28,12 @@ const SignupForm = () => {
       return;
     }
 
-    const user = {
-      username,
-      email,
-      password,
-      confirmPassword,
-    };
-
     fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(formData),
     }).then((response) => {
       if (response.ok) {
         response.json().then((user) => {
