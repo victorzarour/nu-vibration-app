@@ -5,7 +5,7 @@ import FormInput from "../components/FormInput";
 import Button from "./Button";
 import { SignUpContainer } from "../styled/SignupForm.styles";
 
-const SignupForm = ({ setUser }) => {
+const SignupForm = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -42,8 +42,7 @@ const SignupForm = ({ setUser }) => {
     }).then((response) => {
       if (response.ok) {
         response.json().then((user) => {
-          setUser(user);
-          history.push(`/users/${user.id}`);
+          history.push(`/`);
         });
       } else {
         response.json().then((resp) => setErrors(Object.entries(resp.errors)));

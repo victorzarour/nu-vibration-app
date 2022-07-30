@@ -1,7 +1,15 @@
+import { useState, useEffect } from 'react';
 import Banner from "./Banner";
 import Row from "./Row";
 
-const Home = ( { albums } ) => {
+const Home = () => {
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    fetch('/albums')
+    .then(res => res.json())
+    .then(albums => setAlbums(albums))
+  }, []);
 
   const highestRated = albums.filter(album => album.rating > 8)
 

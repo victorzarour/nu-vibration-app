@@ -10,19 +10,12 @@ import SignupForm from './components/SignupForm';
 import LoginForm from './components/LoginForm';
 
 function App() {
-  const [albums, setAlbums] = useState([]);
   const [currentUser, setCurrentUser] = useState(false);
   const [errors, setErrors] = useState(false);
 
-useEffect(() => {
-  fetch('/albums')
-  .then(res => res.json())
-  .then(albums => setAlbums(albums))
-}, []);
-
 // make sure user is authorized and authenticated
 useEffect(() => {
-  fetch('/users')
+  fetch('/authorized_user')
   .then((response) => {
     if (response.ok) {
       response.json()
@@ -34,16 +27,17 @@ useEffect(() => {
 },[]);
 
 // set user to pass as prop
-const setUser = (user) => setUser(user);
+const setUser = (user) => setCurrentUser(user);
 
 if(errors) return <h1>{errors}</h1>
 
   return (
     <div>
-      <Sidebar setUser={ setUser }/>
+      <Sidebar />
+      { currentUser ? <h1>Render current username</h1> : <><a href="/signup">Sign Up</a></> }
        <Switch>
           <Route exact path="/">
-            <Home albums={albums}/>
+            <Home />
           </Route>
           <Route exact path="/albums/:id">
             <AlbumDetails />
@@ -51,13 +45,14 @@ if(errors) return <h1>{errors}</h1>
           <Route exact path="/artists/:id">
             <ArtistPage />
           </Route>
-          <Route path="/songs/:id">
+          <Route exact path="/songs/:id">
             <SongDetails />
           </Route>
-          <Route path="/login">
+
+          <Route exact path="/login">
             <LoginForm />
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <SignupForm />
           </Route>
       </Switch>
