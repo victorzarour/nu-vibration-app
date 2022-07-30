@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+    skip_before_action :authorized_user
 
     def index
         render json: Song.all
@@ -10,7 +11,7 @@ class SongsController < ApplicationController
     end
 
     def create
-        song = Song.create(song_params)
+        song = Song.create!(song_params)
         render json: song, status: :created
     end
 
