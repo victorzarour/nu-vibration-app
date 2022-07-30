@@ -36,6 +36,37 @@ ActiveRecord::Schema.define(version: 2022_07_30_010506) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "cart_items", force: :cascade do |t|
+    t.bigint "cart_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["item_id"], name: "index_cart_items_on_item_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.string "imageUrl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "imageUrl"
+    t.string "description"
+    t.integer "price"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_items_on_category_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.integer "year"
@@ -62,6 +93,9 @@ ActiveRecord::Schema.define(version: 2022_07_30_010506) do
   end
 
   add_foreign_key "albums", "artists"
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "items"
+  add_foreign_key "items", "categories"
   add_foreign_key "songs", "albums"
   add_foreign_key "songs", "artists"
 end
