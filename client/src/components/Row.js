@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react'
 import { NavLink } from "react-router-dom";
 // import YouTube from 'react-youtube'
 
 const Row = ( { title, albums } ) => {
 
-  const albumList = albums.map(album => 
-    <div>
+  const albumList = albums.map(album =>
+    <div key={album.id} >
       <NavLink exact to={`/albums/${album.id}`}>
-        <img 
-            key={album.id} 
-            src={album.image} 
+        <img
+            src={album.image}
             alt={album.title}/>
       </NavLink>
       <h3>{album.title}</h3>
