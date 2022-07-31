@@ -1,8 +1,9 @@
 import Row from "./Row";
+import "./Home.css";
 
 const Home = ( { albums } ) => {
 
-  const highestRated = albums.filter(album => album.rating > 8)
+  const highestRated = albums.filter(album => album.pitchfork_rating > 8)
 
   const pop = albums.filter(album => album.genre.toLowerCase().includes("pop"))
 
@@ -19,8 +20,7 @@ const Home = ( { albums } ) => {
   const rock = albums.filter(album => album.genre.toLowerCase().includes("rock"))
 
   return (
-
-    <div>
+    <div className="body">
         <Row title="Highest Rated" albums={highestRated} />
         <Row title="Pop" albums={pop} />
         <Row title="Latin" albums={latin} />

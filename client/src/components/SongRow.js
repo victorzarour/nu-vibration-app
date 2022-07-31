@@ -1,6 +1,7 @@
 import YouTube from 'react-youtube'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import "./SongRow.css";
 
 const SongRow = ( { song, artist } ) => {
 
@@ -29,12 +30,20 @@ const SongRow = ( { song, artist } ) => {
     return (
         <div className="songRow">
           <div className="songRow__info">
-            <h1 onClick={() => handleClick(song)}>{song.title}</h1>
+
+            <NavLink exact to={`/songs/${song.id}`}>
+                <h1>{song.title}</h1>
+            </NavLink>
+
+            <i class="fa-solid fa-play" onClick={() => handleClick(song)}></i>
+
+            {videoUrl && <YouTube videoId={videoUrl} opts={opts}/>}
+
             <NavLink exact to={`/artists/${artist.id}`}>
                 {artist.name}
             </NavLink>
+
           </div>
-          {videoUrl && <YouTube videoId={videoUrl} opts={opts}/>}
         </div>
       );
   };

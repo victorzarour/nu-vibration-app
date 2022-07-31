@@ -20,7 +20,7 @@ useEffect(() => {
 
 
   return (
-    <div>
+    <div className="player">
       <Sidebar />
        <Switch>
           <Route exact path="/">

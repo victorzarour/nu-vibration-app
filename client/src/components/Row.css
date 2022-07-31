@@ -1,0 +1,57 @@
+.row{
+    margin-bottom: 50px;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* padding: 20px; */
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_image {
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.row_album_container{
+    background-color: black;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 16px;
+    padding-bottom: 12px;
+    transition: 500ms;
+}
+
+.row_info {
+    width: 80%;
+}
+
+.row_info a{
+    text-decoration: none;
+    color: gray;
+}
+
+.row_info h3{
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.row_info_artist:hover{
+    text-decoration: underline;
+}
+
+.row_title{
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.row_album_container:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}

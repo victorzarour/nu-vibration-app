@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Banner = ( { album, artist }) => {
+const AlbumBanner = ( { album, artist }) => {
 
   const { title, year, image, genre, label, pitchfork_rating } = album
 
@@ -8,25 +8,25 @@ const Banner = ( { album, artist }) => {
 
 
   return (
-      <header className='banner'
+      <header
            style={{
               backgroundSize: "cover",
               backgroundImage: `url("${image}")`,
               backgroundPosition: "center center"
           }}
       >
-          <div className='banner__contents'>
-              <h1 className="banner__title">
+          <div>
+              <h1>
                   {title}
               </h1>
 
-              <h1 className="banner__description">
+              <h1>
                   {genre}
               </h1>
           </div>
-          <div className="banner--fadeBottom" />
+          <div/>
       </header>
   )
 };
 
-export default Banner;
+export default AlbumBanner;

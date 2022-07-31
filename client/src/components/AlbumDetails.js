@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AlbumBanner from "./AlbumBanner";
 import SongRow from "./SongRow";
+import "./AlbumDetails.css";
 
 const AlbumDetails = () => {
 
@@ -24,7 +25,7 @@ const {year, label, artist} = album
 
   return (
 
-    <div>
+    <div className="body">
       <AlbumBanner album={album} artist={artist}/>
       <ol>
         {album.songs.map(song =>
@@ -33,7 +34,6 @@ const {year, label, artist} = album
       </ol>
       <p>{year}</p>
       <p>{label}</p>       
-
     </div>
   );
 };
