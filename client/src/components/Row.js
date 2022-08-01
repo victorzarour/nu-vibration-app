@@ -3,18 +3,21 @@ import './Row.css'
 
 const Row = ( { title, albums } ) => {
 
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
+function truncate(str, n) {
+  return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+}
 
-  const albumList = albums.map(album => 
-    <div className="row_album_container">
-      <NavLink exact to={`/albums/${album.id}`}>
-        <img 
-            key={album.id} 
-            src={album.image} 
-            alt={album.title}
-            className="row_image"/>
+const albumList = albums.map(album =>
+  <div key={album.id}  className="row_album_container">
+    <NavLink exact to={`/albums/${album.id}`}>
+      <img
+          src={album.image}
+          alt={album.title}
+          className="row_image"/>
+      </NavLink>
+      <h3>{album.title}</h3>
+      <NavLink exact to={`/artists/${album.artist.id}`}>
+        <h3>{album.artist.name}</h3>
       </NavLink>
       <div className="row_info">
         <h3>{truncate(album.title, 14)}</h3>

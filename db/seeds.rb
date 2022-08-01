@@ -1,14 +1,7 @@
 puts "🌱 Seeding Artists..."
 
-<<<<<<< HEAD
 bey = Artist.create(name: "Beyoncé", image: "https://t2.genius.com/unsafe/837x0/https%3A%2F%2Fimages.genius.com%2F25f7450d84a95225c33e8de77ce2c6b7.1000x1000x1.jpg", bio: "Beyoncé's musical story started when she was nine years old, spending time with a group of friends dancing and singing their way into vocal competitions and performing at the rodeo, local clubs and concert venues in Houston, Texas. The group of girls gradually morphed into becoming Destiny's Child, one of the most successful female recording groups of all-time. Destiny's Child amassed worldwide hits with both singles and albums and in 2001 BEYONCÉ became the first African-American woman and the second woman ever to take home the ASCAP Pop Songwriter of the Year Award for her work with the band. Following her success with Destiny's Child and making the change to becoming a solo artist, BEYONCÉ has become one of the defining artists of our generation. A singer, songwriter, performer, actor, filmmaker, Beyoncé is a creative tour-de-force who has captivated, astonished and is celebrated by the world.")
- 
-=======
-bey = Artist.create(name: "Beyoncé", image: "https://www.billboard.com/wp-content/uploads/2022/06/Beyonce-RENAISSANCE-cr-Carlijn-Jacobs-billboard-1548.jpg", bio: "Beyoncé's musical story started when she was nine years old, spending time with a group of friends dancing and singing their way into vocal competitions and performing at the rodeo, local clubs and concert venues in Houston, Texas. The group of girls gradually morphed into becoming Destiny's Child, one of the most successful female recording groups of all-time. Destiny's Child amassed worldwide hits with both singles and albums and in 2001 BEYONCÉ became the first African-American woman and the second woman ever to take home the ASCAP Pop Songwriter of the Year Award for her work with the band. Following her success with Destiny's Child and making the change to becoming a solo artist, BEYONCÉ has become one of the defining artists of our generation. A singer, songwriter, performer, actor, filmmaker, Beyoncé is a creative tour-de-force who has captivated, astonished and is celebrated by the world.")
 
-puts "🌱 Seeding Albums..."
-
->>>>>>> b2ee9e67a8b2e597c5a2a7a80c13e9f62024e41a
 bday = Album.create(title: "B'Day", artist: bey, year: 2006, image: "https://m.media-amazon.com/images/I/816LJhBJIkL._SL1500_.jpg", genre: "Pop/R&B", label: "Sony", pitchfork_rating: 7.2)
 
 sasha = Album.create(title: "I Am… Sasha Fierce", artist: bey, year: 2008, image: "https://upload.wikimedia.org/wikipedia/en/9/96/I_Am..._Sasha_Fierce.png", genre: "Pop/R&B", label: "Columbia", pitchfork_rating: 5.7)
@@ -763,20 +756,12 @@ array = [
             }
 ]
 
-array.each do |o|
-Song.create(title: o[:title], year: o[:year], artist: o[:artist], featuring: o[:featuring], album: o[:album], produced_by: o[:produced_by], written_by: o[:written_by], image: o[:image], about: o[:about], music_video: o[:music_video])
-end
-
-puts "✅ Done seeding!"
-
-puts "🌱 Seeding spices..."
-
 kendrick = Artist.create(name: "Kendrick Lamar", image: "https://resources.tidal.com/images/f081ffab/8fba/4989/9043/9823518b6db3/750x750.jpg", bio: "Indisputably the most acclaimed rap artist of his generation, Kendrick Lamar is one of those rare MCs who has achieved critical and commercial success while earning the respect and support of those who inspired him. After several years of development, Lamar hit his creative and chart-topping stride in the 2010s. Good Kid, M.A.A.D City (2012), the Grammy-winning To Pimp a Butterfly (2015), and the Grammy- and Pulitzer Prize-winning DAMN. (2017), his three proper major-label albums, have displayed an unmatched mix of inventive wordplay and compelling conceptual narratives, examining internal conflict, flaunting success, and uplifting his community. The screenplay-level detail of Lamar's writing has been enriched by a collective of producers, instrumentalists, singers, and rappers, a high percentage of whom — including inspirations Dr. Dre and MC Eiht, and contemporaries Sounwave and Jay Rock — represent Lamar's native Los Angeles. Lamar's cinematic and collaborative inclinations inevitably attracted the mainstream film industry. Black Panther: The Album (2018) was the source of three of Lamar's Top Ten pop hits. In 2022 he delivered Mr. Morale, the Big Steppers, his fifth studio album and what would be his last with Top Dawg Entertainment.")
 
 kanye = Artist.create(name: "Kanye West", image: "https://resources.tidal.com/images/26076dbd/7361/40d3/9335/f944d2c49ea6/750x750.jpg", bio: "Kanye West is a musician, producer, artist, author and designer. He has sold over 32 million albums and over 85 million digital tracks worldwide. Over the course of his career, he has had six consecutive #1 albums and seven #1 singles, along with scores of radio hits and millions of concert tickets sold worldwide. West has garnered 54 Grammy nominations and has won 21 Grammys, along with numerous other awards and accolades. He is among the most acclaimed artists of the past decade.")
 
 frank = Artist.create(name: "Frank Ocean", image: "https://resources.tidal.com/images/532a2052/8a8f/4a8d/8a45/2baadb2a3e59/750x750.jpg", bio: "Frank Ocean has been one of the more fascinating figures in contemporary music since his early-2010s arrival. A singer and songwriter whose artful output has defied rigid classification as R&B, he has nonetheless pushed that genre forward with seemingly offhanded yet imaginatively detailed narratives in which he has alternated between yearning romantic and easygoing braggart. Known first as a writer and Odd Future affiliate, Ocean made his solo debut with Novacane (2011), a single regarding a fling that could be read, in part, as a criticism of commercial radio, yet it found a home on mainstream urban playlists and went platinum. Despite further strained relations with music industry machinations, Channel Orange (2012), his first proper album, nearly crowned the Billboard 200 and made him a Grammy winner. When Ocean left the major-label system, his commercial clout was greater than ever, as demonstrated by the chart-topping success of Blonde (2016). His recordings since then amount to a short album's worth of singles including the platinum Chanel (2017) and the simultaneously-issued Dear April and Cayendo (2020).")
- 
+
 cardi = Artist.create(name: "Cardi B", image: "https://resources.tidal.com/images/2e0be02f/a74e/431b/880a/fb329ae4e366/750x750.jpg", bio: "Rapper and entertainer Cardi B made her debut in the late 2010s with a quick ascent to the top of the rap and pop charts. After an initial run of singles that crowned her the first female rapper in nearly two decades to top the Billboard Hot 100 (with Bodak Yellow), she issued her critically acclaimed debut album, 2018's Invasion of Privacy, which reached number one and broke additional records with the summer smash I Like It. Capping off her whirlwind breakthrough era, she became the first solo female rapper to win a Grammy for Best Rap Album. Heading into the next decade, Cardi continued to dominate with chart-topping singles like 2020's WAP with Megan Thee Stallion and 2021's Up.")
 
 dua = Artist.create(name: "Dua Lipa", image: "https://resources.tidal.com/images/d27e08fb/7699/4c89/8b6b/ee8dae4842f7/750x750.jpg", bio: "English pop singer Dua Lipa showcases a throwback vibe and a knack for catchy pop with soulful grit, much like Sia, Jessie J, or P!nk, and a slyly rebellious air like Charli XCX or Marina, the Diamonds. After a steady rise in the U.K., she broke onto the U.S. charts with a series of collaborations with Sean Paul, Martin Garrix, and Calvin Harris, as well as multi-platinum singles New Rules and IDGAF from her 2017 debut, Dua Lipa. Still riding the high from her breakthrough, she won 2019 Grammy Awards for Best New Artist and Best Dance Recording for her collaboration with Silk City, Electricity. The following year, she hit new highs with her chart-topping, Grammy-winning sophomore album, the club-inspired Future Nostalgia.")
@@ -812,7 +797,7 @@ array = [
 {
         title: "United in Grief",
         year: 2022,
-        artist: kendrick,    
+        artist: kendrick,
         album: morale,
         produced_by: "Kendrick Lamar, Tim Maxey, Duval Timothy, J.LBS, Beach Noise, Sounwave, BGK (Producer)",
         written_by: "Tim Maxey, Sam Dew, Matt Schaeffer, Sounwave, Johnny Kosich, Jake The Snake, J.LBS, Duval Timothy, BGK (Producer), Kendrick Lamar",
@@ -823,7 +808,7 @@ array = [
 {
         title: "N95",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Baby Keem, Jahaan Sweet, Boi-1da, Sounwave",
         written_by: "Sounwave, Jahaan Sweet, Boi-1da, Sam Dew, Baby Keem, Kendrick Lamar",
@@ -834,7 +819,7 @@ array = [
 {
         title: "Worldwide Steppers",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "TaeBeast, J.LBS, Sounwave",
         written_by: "TaeBeast, Sounwave, J.LBS, Sam Dew, Kendrick Lamar",
@@ -845,8 +830,8 @@ array = [
 {
         title: "Die Hard",
         year: 2022,
-        artist: kendrick, 
-        featuring: "Blxst, Amanda Reifer",      
+        artist: kendrick,
+        featuring: "Blxst, Amanda Reifer",
         album: morale,
         produced_by: "Blxst, FNZ, Baby Keem, J.LBS, DJ Dahi, Sounwave",
         written_by: "J.LBS, Grandmaster Vic, Sam Dew, Baby Keem, Thundercat, Amanda Reifer, Blxst, Kendrick Lamar",
@@ -857,8 +842,8 @@ array = [
 {
         title: "Father Time",
         year: 2022,
-        artist: kendrick, 
-        featuring: "Sampha",     
+        artist: kendrick,
+        featuring: "Sampha",
         album: morale,
         produced_by: "Grandmaster Vic, Duval Timothy, Bēkon, DJ Dahi, Beach Noise, Sounwave",
         written_by: "Grandmaster Vic, Matthew Schaeffer, Sounwave, Kendrick Lamar, K. Jones, Johnny Kosich, Jake The Snake, Duval Timothy, Bēkon, DJ Dahi",
@@ -880,7 +865,7 @@ array = [
 {
         title: "Rich Spirit",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Jahaan Sweet, DJ Dahi, Frano, Sounwave",
         written_by: "Jahaan Sweet, Sounwave, Frano, DJ Dahi, Sam Dew, Kendrick Lamar",
@@ -891,7 +876,7 @@ array = [
 {
         title: "We Cry Together",
         year: 2022,
-        artist: kendrick, 
+        artist: kendrick,
         featuring: "Taylour Paige",
         album: morale,
         produced_by: "Emile Haynie, Bēkon, J.LBS, The Alchemist",
@@ -903,7 +888,7 @@ array = [
 {
         title: "Purple Hearts",
         year: 2022,
-        artist: kendrick, 
+        artist: kendrick,
         featuring: "Taylour Paige",
         album: morale,
         produced_by: "The Alchemist, DJ Khalil, Beach Noise, J.LBS, Sounwave",
@@ -915,7 +900,7 @@ array = [
 {
         title: "Count Me Out",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Tim Maxey, J.LBS, Kendrick Lamar, DJ Dahi, Sounwave",
         written_by: "DJ Dahi, J.LBS, Sam Dew, Kendrick Lamar, Duval Timothy",
@@ -926,7 +911,7 @@ array = [
 {
         title: "Crown",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Duval Timothy",
         written_by: "Sam Dew, Duval Timothy, Kendrick Lamar",
@@ -937,7 +922,7 @@ array = [
 {
         title: "Silent Hill",
         year: 2022,
-        artist: kendrick, 
+        artist: kendrick,
         featuring: "Kodak Black",
         album: morale,
         produced_by: "Beach Noise, Jahaan Sweet, Boi-1da, Sounwave",
@@ -949,7 +934,7 @@ array = [
 {
         title: "Savior (Interlude)",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Sounwave, J.LBS, Kendrick Lamar",
         written_by: "Sounwave, J.LBS, Kendrick Lamar, Baby Keem",
@@ -960,7 +945,7 @@ array = [
 {
         title: "Savior",
         year: 2022,
-        artist: kendrick, 
+        artist: kendrick,
         featuring: "Sam Dew, Baby Keem",
         album: morale,
         produced_by: "Rascal, Mario Luciano, Cardo, J.LBS, Sounwave, Kendrick Lamar",
@@ -972,7 +957,7 @@ array = [
 {
         title: "Auntie Diaries",
         year: 2022,
-        artist: kendrick,    
+        artist: kendrick,
         album: morale,
         produced_by: "The Donuts, Caloway, Rappy, Bēkon, Craig Balmoris, Beach Noise",
         written_by: "Caloway, Rappy, Matt Schaeffer, Johnny Kosich, Jake The Snake, Homer Steinweiss, Bēkon, Daniel Krieger, Craig Balmoris, Kendrick Lamar",
@@ -983,8 +968,8 @@ array = [
 {
         title: "Mr. Morale",
         year: 2022,
-        artist: kendrick,    
-        featuring: "Tanna Leone",  
+        artist: kendrick,
+        featuring: "Tanna Leone",
         album: morale,
         produced_by: "Pharrell Williams",
         written_by: "Tanna Leone, Sam Dew, Kendrick Lamar, Pharrell Williams",
@@ -996,7 +981,7 @@ array = [
         title: "Mother I Sober",
         year: 2022,
         artist: kendrick,
-        featuring: "Beth Gibbons",  
+        featuring: "Beth Gibbons",
         album: morale,
         produced_by: "Bēkon, Sounwave, J.LBS",
         written_by: "Thundercat, Sam Dew, Sounwave, Kendrick Lamar, J.LBS, Bēkon, Beth Gibbons",
@@ -1007,7 +992,7 @@ array = [
 {
         title: "Mirror",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Pharrell Williams, Tim Maxey, Caloway, Bēkon, DJ Dahi, Craig Balmoris, Rappy, Sounwave",
         written_by: "Pharrell Williams, Tim Maxey, Stuart Johnson, Caloway, Daniel Krieger, DJ Dahi, Bēkon, Sounwave, Rappy, Craig Balmoris, Kendrick Lamar",
@@ -1018,7 +1003,7 @@ array = [
 {
         title: "The Heart Part 5",
         year: 2022,
-        artist: kendrick,         
+        artist: kendrick,
         album: morale,
         produced_by: "Beach Noise",
         written_by: "J. Stone, Leon Ware, Arthur 'T-Boy'Ross, Matt Schaeffer, Johnny Kosich, Jake The Snake, Kendrick Lamar",
@@ -1029,7 +1014,7 @@ array = [
 {
         title: "BLOOD.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Bēkon, Top Dawg",
         written_by: "Bēkon, Top Dawg, Kendrick Lamar",
@@ -1040,7 +1025,7 @@ array = [
 {
         title: "DNA.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Mike WiLL Made-It",
         written_by: "",
@@ -1051,7 +1036,7 @@ array = [
 {
         title: "YAH.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Sounwave, DJ Dahi, Top Dawg, Bēkon",
         written_by: "Phillip James Terry, Michael Burton, Top Dawg, DJ Dahi, Sounwave, Kendrick Lamar",
@@ -1062,7 +1047,7 @@ array = [
 {
         title: "ELEMENT.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Sounwave, Ricci Riera, James Blake, Bēkon, TaeBeast",
         written_by: "Mannie Fresh, Juvenile, Ricci Riera, James Blake, Sounwave, Kendrick Lamar",
@@ -1073,7 +1058,7 @@ array = [
 {
         title: "FEEL.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Sounwave",
         written_by: "Sounwave, Kendrick Lamar",
@@ -1084,8 +1069,8 @@ array = [
 {
         title: "LOYALTY.",
         year: 2017,
-        artist: kendrick,         
-        featuring: "Rihanna",      
+        artist: kendrick,
+        featuring: "Rihanna",
         album: damn,
         produced_by: "Top Dawg, Terrace Martin, Sounwave, DJ Dahi",
         written_by: "Brody Brown, Philip Lawrence, Bruno Mars, Rihanna, Terrace Martin, Top Dawg, Sounwave, DJ Dahi, Kendrick Lamar",
@@ -1096,7 +1081,7 @@ array = [
 {
         title: "PRIDE.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Top Dawg, Steve Lacy, Bēkon",
         written_by: "Anna Wise, Steve Lacy, Kendrick Lamar",
@@ -1107,7 +1092,7 @@ array = [
 {
         title: "HUMBLE.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Pluss, Mike WiLL Made-It",
         written_by: "Top Dawg, Pluss, Mike WiLL Made-It, Kendrick Lamar",
@@ -1118,7 +1103,7 @@ array = [
 {
         title: "LUST.",
         year: 2017,
-        artist: kendrick,  
+        artist: kendrick,
         album: damn,
         produced_by: "BADBADNOTGOOD, Sounwave, DJ Dahi",
         written_by: "Ad-Rock, D.M.C., George Noah Booth, RAT BOY, Rev Run, KAYTRANADA, Rick Rubin, Leland Whitty, Chester Hansen, Matthew Tavares, Alex Sowinski, Sounwave, DJ Dahi, Kendrick Lamar",
@@ -1129,8 +1114,8 @@ array = [
 {
         title: "LUST.",
         year: 2017,
-        artist: kendrick,  
-        featuring: "Zacari", 
+        artist: kendrick,
+        featuring: "Zacari",
         album: damn,
         produced_by: "Top Dawg, Greg Kurstin, Sounwave, Teddy Walton",
         written_by: "Teddy Walton, Top Dawg, Greg Kurstin, Sounwave, Zacari, Kendrick Lamar",
@@ -1141,8 +1126,8 @@ array = [
 {
         title: "XXX.",
         year: 2017,
-        artist: kendrick,  
-        featuring: "U2",        
+        artist: kendrick,
+        featuring: "U2",
         album: damn,
         produced_by: "Mike WiLL Made-It, Sounwave, DJ Dahi, Top Dawg, Bēkon",
         written_by: "The Edge (Guitarist), Bono, Larry Mullen Jr., Adam Clayton, Top Dawg, Sounwave, DJ Dahi, Mike WiLL Made-It, Kendrick Lamar",
@@ -1153,7 +1138,7 @@ array = [
 {
         title: "FEAR.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Bēkon, The Alchemist",
         written_by: "Dale Warren, The Alchemist, Kendrick Lamar",
@@ -1164,7 +1149,7 @@ array = [
 {
         title: "GOD.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "Cardo, Sounwave, DJ Dahi, Top Dawg, Bēkon, Ricci Riera, Yung Exclusive,",
         written_by: "Teddy Walton, Brock Korsan, Yung Exclusive, Mike Hector, Bēkon, Top Dawg, Cardo, DJ Dahi, Sounwave, Ricci Riera, Kendrick Lamar",
@@ -1175,7 +1160,7 @@ array = [
 {
         title: "DUCKWORTH.",
         year: 2017,
-        artist: kendrick,         
+        artist: kendrick,
         album: damn,
         produced_by: "9th Wonder, Bēkon",
         written_by: "Joe Scott (Writer), Simon Mavin, John Richard Cornwall, Perrin Moss, Pero Ugrin, Paul Bender, Nai Palm, Johnny Flippin, King Gizmo, Jean Matyka, Janez Boncina, George Williams, Earl Shelton, Don Robey, Bill Curtis, Adolf Topic, 9th Wonder, Kendrick Lamar",
@@ -2093,7 +2078,7 @@ array = [
         title: "Don't Stop 'Til You Get Enough",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones, Michael Jackson",
         written_by: "Greg Phillinganes, Michael Jackson",
         image: "",
@@ -2104,7 +2089,7 @@ array = [
         title: "Rock with You",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Rod Temperton",
         image: "",
@@ -2115,7 +2100,7 @@ array = [
         title: "Workin' Day and Night",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones, Michael Jackson",
         written_by: "Michael Jackson",
         image: "",
@@ -2126,7 +2111,7 @@ array = [
         title: "Get on the Floor",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones, Michael Jackson",
         written_by: "Louis Johnson, Michael Jackson",
         image: "",
@@ -2137,7 +2122,7 @@ array = [
         title: "Off the Wall",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Rod Temperton",
         image: "",
@@ -2148,7 +2133,7 @@ array = [
         title: "Girlfriend",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Paul McCartney",
         image: "",
@@ -2159,7 +2144,7 @@ array = [
         title: "She's Out of My Life",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Tom Bahler",
         image: "",
@@ -2170,7 +2155,7 @@ array = [
         title: "I Can't Help It",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Susaye Green, Stevie Wonder ",
         image: "",
@@ -2182,7 +2167,7 @@ array = [
         year: 1979,
         artist: michael,
         featuring: "Patti Austin",
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "David Foster, Carole Bayer Sager",
         image: "",
@@ -2193,7 +2178,7 @@ array = [
         title: "Burn this Disco Out",
         year: 1979,
         artist: michael,
-        album: wall, 
+        album: wall,
         produced_by: "Quincy Jones",
         written_by: "Rod Temperton",
         image: "",
@@ -2202,7 +2187,7 @@ array = [
             }
 ]
 
-array.each do |o| 
+array.each do |o|
 Song.create(title: o[:title], year: o[:year], artist: o[:artist], featuring: o[:featuring], album: o[:album], produced_by: o[:produced_by], written_by: o[:written_by], image: o[:image], about: o[:about], music_video: o[:music_video])
 end
 
