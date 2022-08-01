@@ -6,23 +6,38 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
 
-        <nav>
-          <ul className='nav-menu-items'>
+        <nav className='nav-menu-items'>
             {SidebarData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
-                  <NavLink to={item.path}>
-                    <span>{item.title}</span>
-                  </NavLink>
-                </li>
+                <NavLink to={item.path}>
+                  <p key={index} className={item.cName}>
+                    <span>{item.title}</span></p>
+                </NavLink>                
               )
             })}
-          </ul>
+
+            <div className="my_collection">
+              <span>MY COLLECTION</span>
+            </div>
+            
+            <NavLink to='/myartists'>
+              <p><span>My Artists</span></p>
+            </NavLink>
+
+            <NavLink to='/mysongs'>
+              <p><span>My Songs</span></p>
+            </NavLink>
+
+            <NavLink to='/myalbums'>
+              <p><span>My Albums</span></p>
+            </NavLink>
+
+            <NavLink to='/myplaylists'>
+              <p><span>My Playlists</span></p>    
+            </NavLink>        
+                    
         </nav>
 
-        <form>
-          <input className="input-search" type="text" placeholder="Search.." name="search"/>
-        </form>
     </div>
   );
 };

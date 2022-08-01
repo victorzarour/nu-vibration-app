@@ -9,7 +9,7 @@ const SongRow = ( { song, artist } ) => {
 
     const opts = {
         height: '350',
-        width: '70%',
+        width: '50%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 1,

@@ -13,7 +13,7 @@ const SongDetails = () => {
 
   const opts = {
       height: '400',
-      width: '70%',
+      width: '50%',
       playerVars: {
           // https://developers.google.com/youtube/player_parameters,
       },

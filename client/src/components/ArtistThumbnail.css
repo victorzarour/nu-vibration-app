@@ -1,0 +1,49 @@
+.artist_thumbnail_image {
+    max-height: 180px;
+    border-radius: 5px;
+}
+
+.artist_thumbnail_container{
+    background-color: black;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 19px;
+    padding-bottom: 18px;
+    transition: 500ms;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.artist_thumbnail_info {
+    width: 80%;
+    margin-left: 2px;
+}
+
+.artist_thumbnail_info h3{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.artist_thumbnail_info h3:hover{
+    text-decoration: underline;
+}
+
+.artist_thumbnail_info a{
+    text-decoration: none;
+    color: white;
+}
+
+.artist_thumbnail_info p{
+    font-size: 12px;
+    margin: 0;
+}
+
+.artist_thumbnail_title{
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.artist_thumbnail_container:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}

@@ -1,7 +1,5 @@
-img {
-  max-height: 250px;
-}
 
 .player {
   display: flex;
+  width: 100%;
 }

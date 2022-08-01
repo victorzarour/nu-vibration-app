@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "react-router-dom": "^6.3.0",
-    "react-youtube": "^9.0.3"
+    "react-youtube": "^9.0.3",
+    "sass": "^1.54.0"
   }
 }

@@ -21,6 +21,9 @@ const Home = ( { albums } ) => {
 
   return (
     <div className="body">
+        <form className="search_bar">
+          <input className="input-search" type="text" placeholder="Search.." name="search"/>
+        </form>
         <Row title="Highest Rated" albums={highestRated} />
         <Row title="Pop" albums={pop} />
         <Row title="Latin" albums={latin} />

@@ -8,8 +8,8 @@ export const SidebarData = [
         cName: 'nav-icon'
     },
     {
-        title: 'Songs',
-        path: '/songs',
+        title: 'Albums',
+        path: '/albums',
         cName: 'nav-text'
     },
     {

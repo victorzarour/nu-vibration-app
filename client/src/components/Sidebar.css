@@ -1,10 +1,45 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    flex: 0.2;
+    flex: 0.1;
     padding-bottom: 60px;
     min-width: 200px;
-    height: 100vh;
     color: white;
     background-color: #040404;
   }
+
+.nav-menu-items{
+  margin-left: 0px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-menu-items a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+
+.nav-menu-items p{
+  padding: 6px;
+}
+
+.nav-menu-items span{
+  margin-left: 10px;
+}
+
+.nav-menu-items p:hover{
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.my_collection{
+  color: darkgray;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 25px 0;
+}

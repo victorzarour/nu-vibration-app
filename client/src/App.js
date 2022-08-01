@@ -8,6 +8,8 @@ import SongDetails from './components/SongDetails';
 import Sidebar from './components/Sidebar';
 import SignupForm from './components/SignupForm';
 import LoginForm from './components/LoginForm';
+import AllArtistsPage from './components/AllArtistsPage';
+import AllAlbumsPage from './components/AllAlbumsPage';
 
 function App() {
   const [albums, setAlbums] = useState([])
@@ -25,6 +27,12 @@ useEffect(() => {
        <Switch>
           <Route exact path="/">
             <Home albums={albums}/>
+          </Route>
+          <Route exact path="/artists">
+            <AllArtistsPage />
+          </Route>
+          <Route exact path="/albums">
+            <AllAlbumsPage />
           </Route>
           <Route exact path="/albums/:id">
             <AlbumDetails />

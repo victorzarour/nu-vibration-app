@@ -16,7 +16,7 @@ const AlbumThumbnail = ( {album} ) => {
             className="thumbnail_image"/>
       <div className="thumbnail_info">
         <NavLink exact to={`/albums/${album.id}`}>
-          <h3>{truncate(album.title, 19)}</h3>
+          <h3>{truncate(album.title, 18)}</h3>
         </NavLink>
         <p>{album.year}</p>
       </div>
