@@ -1,20 +1,27 @@
 import {NavLink} from 'react-router-dom'
-import { SidebarData, SideBarDat } from './SidebarData'
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ( { currentUser } ) => {
   return (
     <div className='sidebar'>
 
         <nav className='nav-menu-items'>
-            {SidebarData.map((item, index) => {
-              return (
-                <NavLink to={item.path}>
-                  <p key={index} className={item.cName}>
-                    <span>{item.title}</span></p>
-                </NavLink>                
-              )
-            })}
+            { currentUser ? "Logout" : 
+              <NavLink to='/login'>
+                <p><span>Login</span></p>    
+              </NavLink>}    
+
+            <NavLink to='/'>
+              <p><span>Home</span></p>
+            </NavLink>
+
+            <NavLink to='/albums'>
+              <p><span>Albums</span></p>
+            </NavLink>
+
+            <NavLink to='/artists'>
+              <p><span>Artists</span></p>
+            </NavLink>
 
             <div className="my_collection">
               <span>MY COLLECTION</span>

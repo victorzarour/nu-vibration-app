@@ -1,7 +1,14 @@
-puts "🌱 Seeding spices..."
+puts "🌱 Seeding Artists..."
 
+<<<<<<< HEAD
 bey = Artist.create(name: "Beyoncé", image: "https://t2.genius.com/unsafe/837x0/https%3A%2F%2Fimages.genius.com%2F25f7450d84a95225c33e8de77ce2c6b7.1000x1000x1.jpg", bio: "Beyoncé's musical story started when she was nine years old, spending time with a group of friends dancing and singing their way into vocal competitions and performing at the rodeo, local clubs and concert venues in Houston, Texas. The group of girls gradually morphed into becoming Destiny's Child, one of the most successful female recording groups of all-time. Destiny's Child amassed worldwide hits with both singles and albums and in 2001 BEYONCÉ became the first African-American woman and the second woman ever to take home the ASCAP Pop Songwriter of the Year Award for her work with the band. Following her success with Destiny's Child and making the change to becoming a solo artist, BEYONCÉ has become one of the defining artists of our generation. A singer, songwriter, performer, actor, filmmaker, Beyoncé is a creative tour-de-force who has captivated, astonished and is celebrated by the world.")
  
+=======
+bey = Artist.create(name: "Beyoncé", image: "https://www.billboard.com/wp-content/uploads/2022/06/Beyonce-RENAISSANCE-cr-Carlijn-Jacobs-billboard-1548.jpg", bio: "Beyoncé's musical story started when she was nine years old, spending time with a group of friends dancing and singing their way into vocal competitions and performing at the rodeo, local clubs and concert venues in Houston, Texas. The group of girls gradually morphed into becoming Destiny's Child, one of the most successful female recording groups of all-time. Destiny's Child amassed worldwide hits with both singles and albums and in 2001 BEYONCÉ became the first African-American woman and the second woman ever to take home the ASCAP Pop Songwriter of the Year Award for her work with the band. Following her success with Destiny's Child and making the change to becoming a solo artist, BEYONCÉ has become one of the defining artists of our generation. A singer, songwriter, performer, actor, filmmaker, Beyoncé is a creative tour-de-force who has captivated, astonished and is celebrated by the world.")
+
+puts "🌱 Seeding Albums..."
+
+>>>>>>> b2ee9e67a8b2e597c5a2a7a80c13e9f62024e41a
 bday = Album.create(title: "B'Day", artist: bey, year: 2006, image: "https://m.media-amazon.com/images/I/816LJhBJIkL._SL1500_.jpg", genre: "Pop/R&B", label: "Sony", pitchfork_rating: 7.2)
 
 sasha = Album.create(title: "I Am… Sasha Fierce", artist: bey, year: 2008, image: "https://upload.wikimedia.org/wikipedia/en/9/96/I_Am..._Sasha_Fierce.png", genre: "Pop/R&B", label: "Columbia", pitchfork_rating: 5.7)
@@ -12,12 +19,13 @@ selftitled = Album.create(title: "BEYONCÉ", artist: bey, year: 2013, image: "ht
 
 lemonade = Album.create(title: "Lemonade", artist: bey, year: 2016, image: "https://pbs.twimg.com/media/FAEDzI6WQAEQsYx.jpg", genre: "Pop/R&B", label: "Columbia / Parkwood Entertainment", pitchfork_rating: 8.5)
 
+puts "🌱 Seeding Songs..."
 
 array = [
     {
         title: "Déjà Vu",
         year: 2006,
-        artist: bey, 
+        artist: bey,
         featuring: "JAY-Z",
         album: bday,
         produced_by: "Beyoncé, Rodney Jerkins",
@@ -755,7 +763,7 @@ array = [
             }
 ]
 
-array.each do |o| 
+array.each do |o|
 Song.create(title: o[:title], year: o[:year], artist: o[:artist], featuring: o[:featuring], album: o[:album], produced_by: o[:produced_by], written_by: o[:written_by], image: o[:image], about: o[:about], music_video: o[:music_video])
 end
 
