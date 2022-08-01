@@ -1,0 +1,30 @@
+.song_banner{
+    width: 100%;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 200px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    position: relative;
+  }
+  
+.song_banner_contents{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 15px;
+    padding: 5px;
+    line-height: 20px;
+}
+
+.song_details a{
+    text-decoration: none;
+    color: white;
+}
+
+.song_details a:hover{
+    text-decoration: underline;
+}
+

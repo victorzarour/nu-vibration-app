@@ -8,8 +8,8 @@ const SongRow = ( { song, artist } ) => {
     const [videoUrl, setVideoUrl] = useState("")
 
     const opts = {
-        height: '600',
-        width: '100%',
+        height: '350',
+        width: '70%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 1,
@@ -37,10 +37,10 @@ const SongRow = ( { song, artist } ) => {
 
             <i class="fa-solid fa-play" onClick={() => handleClick(song)}></i>
 
-            {videoUrl && <YouTube videoId={videoUrl} opts={opts}/>}
+            {videoUrl && <YouTube videoId={videoUrl} opts={opts} className="music_video"/>}
 
             <NavLink exact to={`/artists/${artist.id}`}>
-                {artist.name}
+                <p>{artist.name}</p>
             </NavLink>
 
           </div>

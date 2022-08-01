@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AlbumThumbnail from "./AlbumThumbnail";
 import ArtistBanner from "./ArtistBanner";
+import "./ArtistPage.css";
+
 
 const ArtistPage = () => {
 
@@ -24,13 +26,13 @@ const {name, image, bio, albums} = artist
 
 
   return (
-    <div>
+    <div className="artist_body">
       <ArtistBanner artist={artist}/>
-      {artist.albums.map(album =>
-          <AlbumThumbnail album={album}/>
-        )}
-
-
+      <div className="albums_container">
+        {artist.albums.map(album =>
+            <AlbumThumbnail album={album}/>
+          )}
+      </div>
     </div>
   );
 };

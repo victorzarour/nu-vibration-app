@@ -8,24 +8,15 @@ const AlbumBanner = ( { album, artist }) => {
 
 
   return (
-      <header
-           style={{
-              backgroundSize: "cover",
-              backgroundImage: `url("${image}")`,
-              backgroundPosition: "center center"
-          }}
+    <header className="banner"
+           style={{backgroundImage: `url("${image}")`}}
       >
-          <div>
-              <h1>
-                  {title}
-              </h1>
+        <div className="artist_name">
+            <h1 >{title}</h1>
+        </div>
 
-              <h1>
-                  {genre}
-              </h1>
-          </div>
-          <div/>
-      </header>
+        <div className="banner--fadeBottom" />
+    </header>
   )
 };
 

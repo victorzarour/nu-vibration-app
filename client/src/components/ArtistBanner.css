@@ -1,0 +1,80 @@
+.banner{
+    width: 100%;
+    background-color: black;
+    background-size: contain;
+    background-repeat: inherit;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.banner--fadeBottom {
+    height: 13rem;
+    background-image: linear-gradient( 180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+.artist_name{
+    position:absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.artist_name h1{
+    display: inline-block;
+    margin-right: 15px;
+    margin: 8px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .show {
+    display: block;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 60%; /* Could be more or less, depending on screen size */
+    text-align: justify;
+    line-height: 25px;
+  }
+
+  .modal-content p{
+    margin-top: 40px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .fa-circle-info{
+    cursor: pointer;
+  }

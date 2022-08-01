@@ -12,11 +12,10 @@ const SongDetails = () => {
   const [videoUrl, setVideoUrl] = useState("")
 
   const opts = {
-      height: '600',
-      width: '100%',
+      height: '400',
+      width: '70%',
       playerVars: {
-          // https://developers.google.com/youtube/player_parameters
-          autoplay: 1,
+          // https://developers.google.com/youtube/player_parameters,
       },
   };
 
@@ -33,9 +32,12 @@ const SongDetails = () => {
 if (!isLoaded) return <h2>Loading...</h2>
 
   return (
-    <div className="body">
+    <div className="song_body">
       <SongBanner song={song}/>
-      <YouTube videoId={videoUrl} opts={opts}/>
+      <div className="song_about">
+        <p>{song.about}</p>
+      </div>
+      <YouTube videoId={song.music_video.slice(32, 43)} opts={opts} className="song_video"/>
       <p>LYRICS</p>
       <p>OTHERVIDEOS</p>       
     </div>

@@ -25,15 +25,14 @@ const {year, label, artist} = album
 
   return (
 
-    <div className="body">
+    <div className="album_body">
       <AlbumBanner album={album} artist={artist}/>
-      <ol>
+      <ol className="album_list_item">
         {album.songs.map(song =>
           <li><SongRow song={song} artist={artist}/></li>
         )}
       </ol>
-      <p>{year}</p>
-      <p>{label}</p>       
+      <p className="album_details">{year}, {label}</p>   
     </div>
   );
 };

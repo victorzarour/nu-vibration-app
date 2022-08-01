@@ -286,7 +286,7 @@ array = [
         year: 2011,
         artist: bey,
         album: four,
-        produced_by: "This R&B power ballad was released as a promotional single off of Beyoncé's 2011 album '4' on 25 May 2011 to critical acclaim. It peaked at #57 on the Billboard Hot 100. The music video premiered on August 26, 2011.",
+        produced_by: "Tricky Stewart, The-Dream, Beyoncé",
         written_by: "Beyoncé, Tricky Stewart, Lee Blaske, The-Dream",
         image: "https://t2.genius.com/unsafe/240x240/https%3A%2F%2Fimages.genius.com%2F603c527c65c4c4cdd2da3f426df21235.1000x1000x1.jpg",
         about: "This R&B power ballad was released as a promotional single off of Beyoncé's 2011 album '4' on 25 May 2011 to critical acclaim. It peaked at #57 on the Billboard Hot 100. The music video premiered on August 26, 2011.",
@@ -791,7 +791,7 @@ invasion = Album.create(title: "Invasion of Privacy", artist: cardi, year: 2018,
 
 nostalgia = Album.create(title: "Future Nostalgia", artist: dua, year: 2020, image: "https://media.pitchfork.com/photos/5e7d02b9e21e4f0009eaefd6/1:1/w_320,c_limit/Future%20Nostalgia_Dua%20Lipa.jpg", genre: "Pop, Disco, R&B", label: "Warner")
 
-remember = Album.create(title: "I Remember Yesterday", artist: donna, year: 1977, image: "https://genius.com/album_cover_arts/254597", genre: "Disco", label: "Casablanca")
+remember = Album.create(title: "I Remember Yesterday", artist: donna, year: 1977, image: "https://t2.genius.com/unsafe/837x0/https%3A%2F%2Fimages.genius.com%2Fefa3b5a5313c369f42c9c95ddc567f68.1000x1000x1.png", genre: "Disco", label: "Casablanca")
 
 love = Album.create(title: "Love to Love You Baby", artist: donna, year: 1975, image: "https://t2.genius.com/unsafe/240x0/https%3A%2F%2Fimages.genius.com%2Fdb89efaab92cf5e580a9b96f18d6b149.1000x1000x1.jpg", genre: "Disco", label: "Casablanca, Oasis")
 
