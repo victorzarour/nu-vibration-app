@@ -23,7 +23,7 @@ if (!isLoaded) return <h2>Loading...</h2>
 
   return (
     <div className="all_artists_body">
-      <h1>Albums</h1>
+      <h1>Artists</h1>
       <div className="albums_container">
         {artists.map(artist =>
             <ArtistThumbnail artist={artist}/>

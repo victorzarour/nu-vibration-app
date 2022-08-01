@@ -1,10 +1,11 @@
 .artist_body {
     padding-bottom: 60px;
     width: 100%;
-    height: 100vh;
+    position: static;
     color: white;
     background: linear-gradient(transparent, rgba(0, 0, 0, 1));
     background-color: rgb(91, 87, 115);
+    box-sizing: border-box;
   }
 
 .albums_container{
