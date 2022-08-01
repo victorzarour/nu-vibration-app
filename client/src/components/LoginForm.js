@@ -2,30 +2,17 @@ import { Button } from "./Button";
 import { FormInput } from "./FormInput";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-<<<<<<< HEAD
-import "./LoginForm.css"
-=======
->>>>>>> 526c0b3 (login done)
+// import "./LoginForm.css"
 
 // TO DO GET ERRORS TO DISPLAY ON PAGE
 
 const LoginForm = ({ setUser }) => {
-<<<<<<< HEAD
-
   const [response, setResponse] = useState(false)
-
-=======
->>>>>>> 526c0b3 (login done)
   const [ formData, setFormData ] = useState({
     username: "",
     password: ""
   });
-<<<<<<< HEAD
   const [ errors, setErrors ] = useState([]);
-=======
-  const [ , setErrors ] = useState([]);
->>>>>>> 526c0b3 (login done)
-
   const history = useHistory();
 
   const { username, password } = formData;
