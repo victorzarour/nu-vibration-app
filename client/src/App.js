@@ -37,7 +37,7 @@ if(errors) return <h1>{errors}</h1>
     <div className="player">
       <Sidebar currentUser={currentUser} />
 
-      { currentUser ? <h1>Render current username</h1> : <><a href="/signup">Sign Up</a></> }
+      {/* { currentUser ? <h1>Render current username</h1> : <><a href="/signup">Sign Up</a></> } */}
 
       <Switch>
           <Route exact path="/">

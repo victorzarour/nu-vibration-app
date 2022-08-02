@@ -15,10 +15,6 @@ const albumList = albums.map(album =>
           alt={album.title}
           className="row_image"/>
       </NavLink>
-      <h3>{album.title}</h3>
-      <NavLink exact to={`/artists/${album.artist.id}`}>
-        <h3>{album.artist.name}</h3>
-      </NavLink>
       <div className="row_info">
         <h3>{truncate(album.title, 14)}</h3>
         <NavLink exact to={`/artists/${album.artist.id}`}>

@@ -18,7 +18,9 @@ const SongRow = ( { song, artist } ) => {
 
 
     function handleClick(song){
-        const videoId = song.music_video.slice(32, 43)
+        let videoId
+        song.music_video.startsWith("https://youtu.be") ? videoId = song.music_video.slice(17, 28) : videoId = song.music_video.slice(32, 43)
+        
         if (videoUrl) {
             setVideoUrl('')
         } else {
