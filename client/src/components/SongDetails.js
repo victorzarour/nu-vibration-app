@@ -37,11 +37,16 @@ let videoId
 song.music_video.startsWith("https://youtu.be") ? videoId = song.music_video.slice(17, 28) : videoId = song.music_video.slice(32, 43)
 
 
-function updateSongVideos(newVideo) {
+function addSongVideos(newVideo) {
   setSongVideos([...songVideos, newVideo])
 }
 
-const songVideoArray = songVideos.map(songVideo => <SongVideo key={songVideo} songVideo={songVideo} videoId={videoId} opts={opts}/>)
+function onHandleDelete(id) {
+  const updatedSongVideos = songVideos.filter(songVideo => songVideo.id !== id)
+  setSongVideos(updatedSongVideos) 
+}
+
+const songVideoArray = songVideos.map(songVideo => <SongVideo key={songVideo} songVideo={songVideo} videoId={videoId} opts={opts} onHandleDelete={onHandleDelete}/>)
 
 
   return (
@@ -52,7 +57,7 @@ const songVideoArray = songVideos.map(songVideo => <SongVideo key={songVideo} so
       </div>
       <YouTube videoId={videoId} opts={opts} className="song_video"/>
       <h2>Add a Live Performance or Cover!</h2> 
-      <SongVideoForm id={id} currentUser={currentUser} updateSongVideos={updateSongVideos}/> 
+      <SongVideoForm id={id} currentUser={currentUser} addSongVideos={addSongVideos}/> 
       <div>
           {songVideoArray}
       </div>     

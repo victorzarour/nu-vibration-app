@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_02_153216) do
+ActiveRecord::Schema.define(version: 2022_08_02_203559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "added_comments", force: :cascade do |t|
+    t.string "name"
+    t.string "body"
+    t.bigint "song_video_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_video_id"], name: "index_added_comments_on_song_video_id"
+  end
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
@@ -34,6 +43,15 @@ ActiveRecord::Schema.define(version: 2022_08_02_153216) do
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.string "comment"
+    t.bigint "song_video_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_video_id"], name: "index_comments_on_song_video_id"
   end
 
   create_table "song_videos", force: :cascade do |t|
@@ -73,7 +91,9 @@ ActiveRecord::Schema.define(version: 2022_08_02_153216) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "added_comments", "song_videos"
   add_foreign_key "albums", "artists"
+  add_foreign_key "comments", "song_videos"
   add_foreign_key "song_videos", "songs"
   add_foreign_key "song_videos", "users"
   add_foreign_key "songs", "albums"

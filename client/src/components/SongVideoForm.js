@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function SongVideoForm( { id, currentUser, updateSongVideos } ) {
+function SongVideoForm( { id, currentUser, addSongVideos } ) {
 
 
     const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ function SongVideoForm( { id, currentUser, updateSongVideos } ) {
             body: JSON.stringify(formData),
         })
         .then(r => r.json())
-        .then(song_video => updateSongVideos(song_video))
+        .then(song_video => addSongVideos(song_video))
         setFormData({
             user_id: 1,
             song_id: id, 

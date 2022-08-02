@@ -1,10 +1,6 @@
 class SongVideosController < ApplicationController
-before_action :find_song_video, only: [:show, :update, :destroy]
+before_action :find_song_video, only: [:show, :destroy]
 skip_before_action :authorized_user
-
-    def index
-        render json: SongVideo.all
-    end
 
     def show
         render json: @song_video
@@ -13,11 +9,6 @@ skip_before_action :authorized_user
     def create
         song_video = SongVideo.create!(song_video_params)
         render json: song_video, status: :created
-    end
-
-    def update
-        @song_video.update!(song_video_params)
-        render json: song_video, status: :ok
     end
 
     def destroy
