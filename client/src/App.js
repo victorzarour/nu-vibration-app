@@ -56,7 +56,7 @@ if(errors) return <h1>{errors}</h1>
             <ArtistPage />
           </Route>
           <Route exact path="/songs/:id">
-            <SongDetails />
+            <SongDetails currentUser={ currentUser }/>
           </Route>
           <Route exact path="/login">
             <LoginForm setUser={ setUser }/>
