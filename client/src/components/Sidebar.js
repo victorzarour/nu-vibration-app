@@ -1,50 +1,74 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 import "./Sidebar.css";
 
-const Sidebar = ( { currentUser } ) => {
+const Sidebar = ( { currentUser, setCurrentUser } ) => {
+  const history = useHistory();
+
+  const handleLogout = () => {
+    fetch('/logout', {
+      method: 'DELETE'
+    })
+    .then((res) => {
+      if (res.ok) {
+        setCurrentUser(false);
+        history.push('/');
+      }
+    });
+  };
+
   return (
     <div className='sidebar'>
+      <nav className='nav-menu-items'>
 
-        <nav className='nav-menu-items'>
-            { currentUser ? "Logout" : 
-              <NavLink to='/login'>
-                <p><span>Login</span></p>    
-              </NavLink>}    
+        { currentUser ?
+          <NavLink to='/logout' onClick={ handleLogout }>
+          <p><span>Logout</span></p>
+          </NavLink>
+          :
+          <NavLink to='/login'>
+            <p><span>Login</span></p>
+          </NavLink>
+        }
 
-            <NavLink to='/'>
-              <p><span>Home</span></p>
-            </NavLink>
+        { currentUser ? null :
+          <NavLink to='/signup'>
+            <p><span>Signup</span></p>
+          </NavLink>
+        }
 
-            <NavLink to='/albums'>
-              <p><span>Albums</span></p>
-            </NavLink>
+        <NavLink to='/'>
+          <p><span>Home</span></p>
+        </NavLink>
 
-            <NavLink to='/artists'>
-              <p><span>Artists</span></p>
-            </NavLink>
+        <NavLink to='/albums'>
+          <p><span>Albums</span></p>
+        </NavLink>
 
-            <div className="my_collection">
-              <span>MY COLLECTION</span>
-            </div>
-            
-            <NavLink to='/myartists'>
-              <p><span>My Artists</span></p>
-            </NavLink>
+        <NavLink to='/artists'>
+          <p><span>Artists</span></p>
+        </NavLink>
 
-            <NavLink to='/mysongs'>
-              <p><span>My Songs</span></p>
-            </NavLink>
+        <div className="my_collection">
+          <span>MY COLLECTION</span>
+        </div>
 
-            <NavLink to='/myalbums'>
-              <p><span>My Albums</span></p>
-            </NavLink>
+        <NavLink to='/myartists'>
+          <p><span>My Artists</span></p>
+        </NavLink>
 
-            <NavLink to='/myplaylists'>
-              <p><span>My Playlists</span></p>    
-            </NavLink>        
-                    
-        </nav>
+        <NavLink to='/mysongs'>
+          <p><span>My Songs</span></p>
+        </NavLink>
 
+        <NavLink to='/myalbums'>
+          <p><span>My Albums</span></p>
+        </NavLink>
+
+        <NavLink to='/myplaylists'>
+          <p><span>My Playlists</span></p>
+        </NavLink>
+
+      </nav>
     </div>
   );
 };

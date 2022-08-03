@@ -5,8 +5,8 @@ export const FormInput = ({ label, ...otherProps }) => {
     <Group>
       <Input {...otherProps} />
       {label && (
-        <FormInputLabel shrink={otherProps.value?.length || 0}>
-          {label}
+        <FormInputLabel shrink={otherProps.value?.length || 0} >
+          { label }
         </FormInputLabel>
       )}
     </Group>
