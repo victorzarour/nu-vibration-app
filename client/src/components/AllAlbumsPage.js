@@ -32,7 +32,7 @@ if (!isLoaded) return <h2>Loading...</h2>
           <AlbumThumbnail album={album} currentUser={currentUser}/>
           )}
       </div>
-    </div>
+    </div> 
   );
 };
 
