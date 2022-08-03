@@ -12,34 +12,33 @@ import AllArtistsPage from './components/AllArtistsPage';
 import AllAlbumsPage from './components/AllAlbumsPage';
 import MyArtists from './components/MyArtists';
 
-function App() {
-  const [currentUser, setCurrentUser] = useState(false);
-  const [errors, ] = useState(false);
+const App = () => {
+  const [ currentUser, setCurrentUser ] = useState(false);
 
-// make sure user is authorized and authenticated
-useEffect(() => {
-  fetch('/authorized_user')
-  .then((response) => {
-    if (response.ok) {
-      response.json()
-      .then((user) => {
-        setUser(user);
-      });
-    }
-  })
-},[]);
-
-// set user to pass as prop
-const setUser = (user) => setCurrentUser(user);
-
-if(errors) return <h1>{errors}</h1>
+  // Check if current user is authorized and set to current user
+  useEffect(() => {
+    fetch('/authorized_user')
+    .then((response) => {
+      if (response.ok) {
+        response.json().then((user) => {
+          setCurrentUser(user);
+        });
+      } else {
+        response.json().then( (json) => {
+          if (json.errors !== undefined) {
+            alert(json.errors);
+          }
+        });
+      }
+    })
+  },[]);
 
   return (
     <div className="player">
-      <Sidebar currentUser={currentUser} />
-
-      {/* { currentUser ? <h1>Render current username</h1> : <><a href="/signup">Sign Up</a></> } */}
-
+      <Sidebar
+      currentUser={ currentUser }
+      setCurrentUser={ setCurrentUser }
+      />
       <Switch>
           <Route exact path="/">
             <Home />
@@ -63,7 +62,7 @@ if(errors) return <h1>{errors}</h1>
             <SongDetails currentUser={ currentUser }/>
           </Route>
           <Route exact path="/login">
-            <LoginForm setUser={ setUser }/>
+            <LoginForm setCurrentUser={ setCurrentUser }/>
           </Route>
           <Route exact path="/signup">
             <SignupForm />
