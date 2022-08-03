@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import "./AllArtistsPage.css";
-import ArtistThumbnail from './ArtistThumbnail';
+import MyArtistThumbnail from './MyArtistThumbnail';
 
 const MyArtists = ( { currentUser } ) => {
 
@@ -12,10 +11,15 @@ const [userArtists, setUserArtists] = useState([])
         .then(user => setUserArtists(user.user_artists))
     }, [])
 
+    const destructured = userArtists.map(artist => artist.artist)
+
   return (
-    <div >
-        {userArtists.map(userArtist => <ArtistThumbnail artist={userArtist}/>)}
-  </div>
+    <div className="all_artists_body">
+      <h1>My Artists</h1>
+        <div className="albums_container">
+          {destructured.map(artist => <MyArtistThumbnail artist={artist} />)}
+        </div>
+    </div>
   );
 };
 

@@ -11,6 +11,8 @@ import LoginForm from './components/LoginForm';
 import AllArtistsPage from './components/AllArtistsPage';
 import AllAlbumsPage from './components/AllAlbumsPage';
 import MyArtists from './components/MyArtists';
+import MySongs from './components/MySongs';
+import MyAlbums from './components/MyAlbums';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
@@ -45,22 +47,28 @@ if(errors) return <h1>{errors}</h1>
             <Home />
           </Route>
           <Route exact path="/artists">
-            <AllArtistsPage />
+            <AllArtistsPage currentUser={currentUser}/>
           </Route>
           <Route exact path="/myartists">
             <MyArtists currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums">
-            <AllAlbumsPage />
+            <AllAlbumsPage currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums/:id">
-            <AlbumDetails />
+            <AlbumDetails currentUser={currentUser}/>
+          </Route>
+          <Route exact path="/myalbums">
+            <MyAlbums currentUser={currentUser}/>
           </Route>
           <Route exact path="/artists/:id">
             <ArtistPage />
           </Route>
           <Route exact path="/songs/:id">
             <SongDetails currentUser={ currentUser }/>
+          </Route>
+          <Route exact path="/mysongs">
+            <MySongs currentUser={currentUser}/>
           </Route>
           <Route exact path="/login">
             <LoginForm setUser={ setUser }/>

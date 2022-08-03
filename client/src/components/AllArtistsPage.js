@@ -4,7 +4,7 @@ import ArtistThumbnail from "./ArtistThumbnail";
 import "./AllArtistsPage.css";
 
 
-const AllArtistsPage = () => {
+const AllArtistsPage = ( {currentUser} ) => {
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [artists, setArtists] = useState([])
@@ -26,7 +26,7 @@ if (!isLoaded) return <h2>Loading...</h2>
       <h1>Artists</h1>
       <div className="albums_container">
         {artists.map(artist =>
-            <ArtistThumbnail artist={artist}/>
+            <ArtistThumbnail artist={artist} currentUser={currentUser}/>
           )}
       </div>
     </div>

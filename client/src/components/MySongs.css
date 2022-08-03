@@ -1,0 +1,23 @@
+.my_songs_container {
+    width: 100%;
+    color: white;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    background-color: rgb(91, 87, 115);
+  }
+
+.my_songs_header{
+    margin: 30px 32px;
+}
+
+  .album_details{
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .album_list_item{
+    font-size: 14px;
+    margin-left: 4px;
+  }
+  
+  
+  

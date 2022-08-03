@@ -19,4 +19,5 @@ class SessionController < ApplicationController
     head :no_content
   end
 
+  
 end

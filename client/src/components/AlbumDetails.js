@@ -4,7 +4,7 @@ import AlbumBanner from "./AlbumBanner";
 import SongRow from "./SongRow";
 import "./AlbumDetails.css";
 
-const AlbumDetails = () => {
+const AlbumDetails = ( { currentUser } ) => {
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [album, setAlbum] = useState([])
@@ -29,7 +29,7 @@ const {year, label, artist} = album
       <AlbumBanner album={album} artist={artist}/>
       <ol className="album_list_item">
         {album.songs.map(song =>
-          <li><SongRow song={song} artist={artist}/></li>
+          <li><SongRow song={song} artist={artist} currentUser={currentUser}/></li>
         )}
       </ol>
       <p className="album_details">{year}, {label}</p>   

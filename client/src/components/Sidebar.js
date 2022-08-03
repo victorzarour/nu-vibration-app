@@ -23,26 +23,26 @@ const Sidebar = ( { currentUser } ) => {
               <p><span>Artists</span></p>
             </NavLink>
 
-            <div className="my_collection">
-              <span>MY COLLECTION</span>
-            </div>
-            
-            <NavLink to='/myartists'>
-              <p><span>My Artists</span></p>
-            </NavLink>
+            { currentUser ? 
+            <div>
+              <div className="my_collection">
+                <span>MY COLLECTION</span>
+              </div>
+              
+              <NavLink to='/myartists'>
+                <p><span>My Artists</span></p>
+              </NavLink>
 
-            <NavLink to='/mysongs'>
-              <p><span>My Songs</span></p>
-            </NavLink>
+              <NavLink to='/mysongs'>
+                <p><span>My Songs</span></p>
+              </NavLink>
 
-            <NavLink to='/myalbums'>
-              <p><span>My Albums</span></p>
-            </NavLink>
+              <NavLink to='/myalbums'>
+                <p><span>My Albums</span></p>
+              </NavLink>
+            </div> : ""
+            }
 
-            <NavLink to='/myplaylists'>
-              <p><span>My Playlists</span></p>    
-            </NavLink>        
-                    
         </nav>
 
     </div>

@@ -1,26 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./AlbumThumbnail.css"
 
-const AlbumThumbnail = ( { album, currentUser } ) => {
+const MyAlbumThumbnail = ( { album } ) => {
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
-
-  const formData = {
-    user_id: currentUser.id,
-    album_id: album.id
-  }
-
-  function handleAddAlbum() {
-    fetch('/user_albums', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData)
-    })
   }
 
   return (
@@ -35,10 +19,9 @@ const AlbumThumbnail = ( { album, currentUser } ) => {
           <h3>{truncate(album.title, 18)}</h3>
         </NavLink>
         <p>{album.year}</p>
-        <i class="fa-solid fa-heart" onClick={handleAddAlbum}></i>
       </div>
   </div>
   );
 };
 
-export default AlbumThumbnail;
+export default MyAlbumThumbnail;

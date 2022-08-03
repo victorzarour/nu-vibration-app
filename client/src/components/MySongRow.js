@@ -1,11 +1,19 @@
 import YouTube from 'react-youtube'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import "./SongRow.css";
 
-const SongRow = ( { song, artist, currentUser } ) => {
+const MySongRow = ( { song } ) => {
 
     const [videoUrl, setVideoUrl] = useState("")
+    const [artist, setArtist] = useState([])
+    const { artist_id } = song
+
+    useEffect(() => {
+        fetch(`/artists/${artist_id}`)
+        .then(res => res.json())
+        .then(artist => setArtist(artist))
+    }, [])
 
     const opts = {
         height: '350',
@@ -27,22 +35,6 @@ const SongRow = ( { song, artist, currentUser } ) => {
             }
     }
 
-    const formData = {
-        user_id: currentUser.id,
-        song_id: song.id
-      }
-    
-      function handleAddSong() {
-        fetch('/user_songs', {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(formData)
-        })
-      }
-    
 
     return (
         <div className="songRow">
@@ -59,11 +51,10 @@ const SongRow = ( { song, artist, currentUser } ) => {
             <NavLink exact to={`/artists/${artist.id}`}>
                 <p>{artist.name}</p>
             </NavLink>
-            <i class="fa-solid fa-heart" onClick={handleAddSong}></i>
 
           </div>
         </div>
       );
   };
   
-  export default SongRow;
+  export default MySongRow;
