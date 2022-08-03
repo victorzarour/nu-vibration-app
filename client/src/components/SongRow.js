@@ -16,7 +16,6 @@ const SongRow = ( { song, artist } ) => {
         },
     };
 
-
     function handleClick(song){
         let videoId
         song.music_video.startsWith("https://youtu.be") ? videoId = song.music_video.slice(17, 28) : videoId = song.music_video.slice(32, 43)
@@ -27,7 +26,6 @@ const SongRow = ( { song, artist } ) => {
             setVideoUrl(videoId)
             }
     }
-
 
     return (
         <div className="songRow">
