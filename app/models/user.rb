@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :song_videos
   has_many :songs, through: :song_videos
+  has_many :user_artists
 
   has_secure_password
 end

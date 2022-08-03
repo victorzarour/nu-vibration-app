@@ -10,6 +10,7 @@ import SignupForm from './components/SignupForm';
 import LoginForm from './components/LoginForm';
 import AllArtistsPage from './components/AllArtistsPage';
 import AllAlbumsPage from './components/AllAlbumsPage';
+import MyArtists from './components/MyArtists';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
@@ -45,6 +46,9 @@ if(errors) return <h1>{errors}</h1>
           </Route>
           <Route exact path="/artists">
             <AllArtistsPage />
+          </Route>
+          <Route exact path="/myartists">
+            <MyArtists currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums">
             <AllAlbumsPage />
