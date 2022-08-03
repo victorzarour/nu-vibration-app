@@ -23,12 +23,15 @@ if (!isLoaded) return <h2>Loading...</h2>
 
   return (
     <div className="all_albums_body">
-        <h1>Albums</h1>
-        <div className="albums_container">
-        {albums.map(album =>
-            <AlbumThumbnail album={album} currentUser={currentUser}/>
-            )}
-        </div>
+      <form className="search_bar">
+        <input className="input-search" type="text" placeholder="Search.." name="search"/>
+      </form>
+      <h1>Albums</h1>
+      <div className="albums_container">
+      {albums.map(album =>
+          <AlbumThumbnail album={album} currentUser={currentUser}/>
+          )}
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 // import "./LoginForm.css"
-// import { SignInContainer } from "../styled/LoginForm.styles";
+import { SignInContainer } from "../styled/LoginForm.styles";
 
 const LoginForm = ({ setCurrentUser }) => {
   const [ formData, setFormData ] = useState({
@@ -46,31 +46,28 @@ const LoginForm = ({ setCurrentUser }) => {
   };
 
   return (
-    <div>
+    <SignInContainer>
+      <form onSubmit={ handleSubmit }>
+        <FormInput
+        label="Username"
+        type="text"
+        required
+        onChange={ handleChange }
+        name="username"
+        value={ username }
+        />
 
-    </div>
-    // <SignInContainer>
-    //   <form onSubmit={ handleSubmit }>
-    //     <FormInput
-    //     label="Username"
-    //     type="text"
-    //     required
-    //     onChange={ handleChange }
-    //     name="username"
-    //     value={ username }
-    //     />
-
-    //     <FormInput
-    //     label="Password"
-    //     type="password"
-    //     required
-    //     onChange={ handleChange }
-    //     name="password"
-    //     value={ password }
-    //     />
-    //     <Button type="submit">Login</Button>
-    //   </form>
-    // </SignInContainer>
+        <FormInput
+        label="Password"
+        type="password"
+        required
+        onChange={ handleChange }
+        name="password"
+        value={ password }
+        />
+        <Button type="submit">Login</Button>
+      </form>
+    </SignInContainer>
   );
 };
 
