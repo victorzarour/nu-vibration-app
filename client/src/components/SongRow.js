@@ -28,7 +28,7 @@ const SongRow = ( { song, artist, currentUser } ) => {
     }
 
     const formData = {
-        user_id: currentUser.id,
+        user_id: currentUser ? currentUser.id : 1,
         song_id: song.id
       }
     

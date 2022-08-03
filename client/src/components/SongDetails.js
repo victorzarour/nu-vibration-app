@@ -15,10 +15,7 @@ const SongDetails = ( { currentUser } ) => {
 
   const opts = {
       height: '400',
-      width: '50%',
-      playerVars: {
-          // https://developers.google.com/youtube/player_parameters,
-      },
+      width: '50%'
   };
 
   useEffect(() => {

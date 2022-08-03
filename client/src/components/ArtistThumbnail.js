@@ -9,7 +9,7 @@ const ArtistThumbnail = ( { artist, currentUser } ) => {
 
 
   const formData = {
-    user_id: currentUser.id,
+    user_id: currentUser ? currentUser.id : 1,
     artist_id: artist.id
   }
 

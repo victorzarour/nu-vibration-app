@@ -11,7 +11,7 @@ const Home = () => {
     .then(albums => setAlbums(albums))
   }, []);
 
-  const highestRated = albums.filter(album => album.pitchfork_rating > 8)
+  const highestRated = albums.filter(album => album.pitchfork_rating > 7)
 
   const pop = albums.filter(album => album.genre.toLowerCase().includes("pop"))
 
