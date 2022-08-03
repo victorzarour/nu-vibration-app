@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
 import { FormInput } from "./FormInput";
 import { Button } from "./Button";
 import { SignUpContainer } from "../styled/SignupForm.styles";
-
-// TO DO GET ERRORS TO DISPLAY ON PAGE
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +12,6 @@ const SignupForm = () => {
     confirmPassword: "",
   });
 
-  const [ , setErrors] = useState([]);
   const history = useHistory();
 
   const { username, email, password, confirmPassword } = formData;
@@ -40,7 +36,7 @@ const SignupForm = () => {
           history.push(`/`);
         });
       } else {
-        response.json().then((resp) => setErrors(Object.entries(resp.errors)));
+        response.json().then((resp) => alert(resp.errors));
       }
     });
   };
@@ -56,6 +52,7 @@ const SignupForm = () => {
       <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={ handleSubmit }>
+
         <FormInput
           label='Username'
           type='text'
@@ -91,8 +88,10 @@ const SignupForm = () => {
           name='confirmPassword'
           value={ confirmPassword }
         />
+
         <Button type='submit'>Sign Up</Button>
       </form>
+
     </SignUpContainer>
   );
 };
