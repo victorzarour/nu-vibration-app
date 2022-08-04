@@ -2,6 +2,7 @@ import YouTube from 'react-youtube'
 import CommentForm from './CommentForm';
 import Comment from './Comment';
 import { useState, useEffect } from "react";
+import './SongVideo.css'
 
 const SongVideo = ( { songVideo, opts, onHandleDelete, currentUser } ) => {
   const [songVideoComments, setSongVideoComments] = useState([])
@@ -50,21 +51,24 @@ const SongVideo = ( { songVideo, opts, onHandleDelete, currentUser } ) => {
 
   let displayDelete
   currentUser && currentUser.id === user.id ? 
-    displayDelete = <button onClick={handleDelete}>DELETE</button>
+    displayDelete = <button className='x-btn' onClick={handleDelete}>x</button>
     :
     displayDelete = null
 
   return (
     <div>
+      <div className='vid-post-info'>
+        <h2>{displayDelete}{title}</h2>
+        <p><b>Shared By:</b> {user.username}</p>
+        <p><b>User's Thoughts:</b> {comments}</p>  
+      </div>
 
-      <p>By {user.username}</p>
-      <p>{title}</p>
-      <p>{comments}</p>  
-
-      {displayDelete}
-      
+    
+   
+     
       <YouTube videoId={videoId} opts={opts} className="song_video"/>
       
+      <h2 className='add-comment'>Comments:</h2>
       {songVideoComments.map(songVideoComment => <Comment key={songVideoComment} songVideoComment={songVideoComment} handleDeleteComment={handleDeleteComment} onUpdateComment={onUpdateComment} currentUser={currentUser} />)}
 
       <CommentForm onAddComment={onAddComment} songVideoId={id} currentUser={currentUser} />

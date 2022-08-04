@@ -29,7 +29,6 @@ const MyAlbumThumbnail = ( { userAlbum, onDeleteUserAlbum } ) => {
           <NavLink exact to={`/albums/${album.id}`}>
             <h3>{truncate(album.title, 14)}</h3>
           </NavLink>
-          <p>{album.year}</p>
         </div>
         <div className="column_two">
           <i class="fa-solid fa-minus" onClick={handleDeleteUserAlbum}></i>

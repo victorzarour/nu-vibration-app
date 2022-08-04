@@ -56,13 +56,13 @@
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
     text-align: justify;
     line-height: 25px;
   }
 
   .modal-content p{
-    margin-top: 40px;
+    margin: 40px;
   }
   
   /* The Close Button */

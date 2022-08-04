@@ -1,4 +1,6 @@
 import { useState } from "react";
+import './SongVideo.css'
+
 
 function SongVideoForm( { id, currentUser, addSongVideos } ) {
 
@@ -44,17 +46,16 @@ function SongVideoForm( { id, currentUser, addSongVideos } ) {
 
           <div> 
             <input className='input' type="text" id="title" placeholder="Title..." name="title" value={formData.title} onChange={handleChange}/>
-          </div>
 
-          <div> 
             <input className='input' type="text" id="video_url" placeholder="Video URL..." name="video_url" value={formData.video_url} onChange={handleChange}/>
           </div>
 
+
           <div> 
-            <textarea className='textarea' id="comments" name="comments" placeholder="Comments..." value={formData.comments} onChange={handleChange} style={{height:200}}></textarea>
+            <textarea className='textarea' id="comments" name="comments" placeholder="Comments..." value={formData.comments} onChange={handleChange} style={{height:100}}></textarea>
           </div>
 
-          <button type="submit">Submit</button>
+          <button className='sub-btn' type="submit">Submit</button>
         </form>
       </div>
     );

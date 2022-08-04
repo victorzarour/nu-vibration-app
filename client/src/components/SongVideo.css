@@ -1,0 +1,54 @@
+.x-btn {
+    margin: 10px 10px;
+    margin-bottom: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.x-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.vid-post-info {
+    display: block;
+    text-align: center;
+}
+
+
+
+/*SongVideoForm.js tags*/
+.songVideoForm {
+    display: block;
+    text-align: center;
+    
+   
+}
+
+.input, .textarea {
+    color: black;
+    font-family: "Roboto", sans-serif; 
+    line-height: 30px;
+    font-family: "Roboto", sans-serif; 
+    font-size: 18px;
+    border-radius: 8px; 
+}
+
+.sub-btn {
+    font-family: "Roboto", sans-serif; 
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.sub-btn:hover {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+}

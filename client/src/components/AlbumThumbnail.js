@@ -23,6 +23,7 @@ const [liked, setLiked] = useState(false)
       },
       body: JSON.stringify(formData)
     })
+    setLiked(true)
   }
 
   const { id, image, title } = album

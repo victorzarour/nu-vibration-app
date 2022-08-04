@@ -1,0 +1,75 @@
+.commentForm {
+    display: block;
+    text-align: center;
+   
+}
+
+.btn {
+    font-family: "Roboto", sans-serif; 
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+}
+
+
+/*Comment.js tags*/
+
+.add-comment {
+    display: block;
+    text-align: center;
+}
+
+.display {
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+.display-comments {
+    display: block;
+    text-align: center;
+}
+
+.fa-regular {
+    margin: 14px 14px;
+    margin-bottom: 0px;
+    padding: 7px; 
+    width: 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.textarea{
+    width: 31.5%;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 12px;
+    text-align: justify;
+    line-height: 30px;
+    font-family: "Roboto", sans-serif; 
+    font-size: 18px;
+}
+
+.individualComments {
+    background-color: rgb(158, 167, 170);
+    color: black;
+    width: 30%;
+    padding: 10px;
+    line-height: 25px;
+    border-radius: 20px;
+    margin: 30px auto;
+}

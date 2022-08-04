@@ -15,7 +15,7 @@ import MySongs from './components/MySongs';
 import MyAlbums from './components/MyAlbums';
 
 const App = () => {
-  const [ currentUser, setCurrentUser ] = useState(false)
+  const [currentUser, setCurrentUser] = useState(false)
   const [albums, setAlbums] = useState([])
   const [artists, setArtists] = useState([])
   const [search, setSearch] = useState("")

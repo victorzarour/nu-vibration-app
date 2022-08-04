@@ -2,7 +2,7 @@ import AlbumThumbnail from "./AlbumThumbnail";
 import "./AlbumThumbnail.css";
 
 
-const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums, userAlbums, setUserAlbums }) => {
+const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums }) => {
 
   return (
     <div className="all_albums_body">

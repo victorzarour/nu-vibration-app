@@ -32,13 +32,12 @@ function CommentForm( { onAddComment, songVideoId, currentUser } ) {
 
         { currentUser ? 
           <form onSubmit={handleSubmit}>
-            <h2>Feel free to add your own comment!</h2>
-
+        
             <div> 
-              <textarea className='textarea' id="body" name="body" placeholder="Write something..." value={body} onChange={handleChange} style={{height:100}}></textarea>
+              <textarea className='textarea' id="body" name="body" placeholder="Add a comment..." value={body} onChange={handleChange} style={{height:100}}></textarea>
             </div>
 
-            <button type="submit">Submit</button>
+            <button className='btn' type="submit">Submit</button>
           </form>
           : null }
 

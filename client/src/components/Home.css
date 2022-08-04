@@ -1,5 +1,6 @@
 .body {
     padding: 30px;
+    padding-top: 50px;
     width: 100%;
     overflow-x: auto;
     flex: 1;
@@ -10,8 +11,8 @@
   
 .searchbar{
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: 25px;
+  right: 45px;
   /* transform: translate(-50%,-50%); */
   transition: all 1s;
   width: 50px;

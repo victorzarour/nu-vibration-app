@@ -18,3 +18,8 @@
   margin: 30px;
   text-align: justify;
 }
+
+.add-cover h1{
+  display: block;
+  text-align: center;
+}

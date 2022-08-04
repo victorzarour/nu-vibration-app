@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import './Comment.css'
+import './CommentForm.css'
 
 function Comment( { songVideoComment, handleDeleteComment, onUpdateComment, currentUser } ) {
     const { id, body, user } = songVideoComment
@@ -25,31 +25,34 @@ function Comment( { songVideoComment, handleDeleteComment, onUpdateComment, curr
         })
         .then(res => res.json())
         .then(updatedComment => onUpdateComment(updatedComment))
+        setEdit(body)
+        setShow(!show)
     }
 
     let displayComments
-
+    
     currentUser && currentUser.id === user.id ? 
         displayComments = 
-        <div>
-            <button onClick={handleShow}>Edit</button>
-            <button className='delete-btn'onClick={() =>handleDeleteComment(id)}>Delete</button>
+        <div className={'display-comments'}>
+            <button className={'fa-regular fa-pen-to-square'} onClick={handleShow}></button>
+            <button className='fa-regular fa-trash-can' onClick={() =>handleDeleteComment(id)}></button>
             <form className={show ? "display" : "hide"} onSubmit={handleSubmit}>
                 <textarea className="editInput" type='text' required id='name' name='name' onChange={handleChange} value={edit}/>
-                <button type='submit'>Done</button>
+                <button className={'fa-regular fa-square-check'} type='submit'></button>
             </form>
          </div>
         : displayComments = null
 
     return(
-        <div className='individualComments'>
-            
-            <div className={show ? "hide" : "display"}> 
-                <p>By {user.username}</p>          
-                <p>{body}</p>
-            </div>
-
-            {displayComments}
+        <div >
+            <div className='individualComments'>
+                <div className={show ? "hide" : "display"}> 
+                    <p>By {user.username}</p>          
+                    <p>{body}</p>
+                </div>
+        
+                {displayComments}
+            </div> 
 
         </div>
     )
