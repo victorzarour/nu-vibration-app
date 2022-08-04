@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 // import './Comment.css'
 
-function Comment( { addedComment, handleDeleteComment, onUpdateComment } ) {
-    const { id, name, body } = addedComment
+function Comment( { songVideoComment, handleDeleteComment, onUpdateComment, currentUser } ) {
+    const { id, body, user } = songVideoComment
     const [show, setShow] = useState(false)
     const [edit, setEdit] = useState(body)
 
@@ -26,23 +26,32 @@ function Comment( { addedComment, handleDeleteComment, onUpdateComment } ) {
         })
         .then(res => res.json())
         .then(updatedComment => onUpdateComment(updatedComment))
-        //BREAKING ON THIS LINE
-        // setEdit(body)
-        // setShow(!show)
     }
 
-    return(
-        <div className='individualComments'>
-            <div className={show ? "hide" : "display"}>            
-                <p>{name}</p>
-                <p>{body}</p>
-                <button onClick={handleShow}>Edit</button>
-                <button className='delete-btn'onClick={() =>handleDeleteComment(id)}>Delete</button>
-            </div>
+    let displayComments
+
+    currentUser && currentUser.id === user.id ? 
+        displayComments = 
+        <div>
+            <button onClick={handleShow}>Edit</button>
+            <button className='delete-btn'onClick={() =>handleDeleteComment(id)}>Delete</button>
             <form className={show ? "display" : "hide"} onSubmit={handleSubmit}>
                 <textarea className="editInput" type='text' required id='name' name='name' onChange={handleChange} value={edit}/>
                 <button type='submit'>Done</button>
             </form>
+         </div>
+        : displayComments = null
+
+    return(
+        <div className='individualComments'>
+            
+            <div className={show ? "hide" : "display"}> 
+                <p>By {user.username}</p>          
+                <p>{body}</p>
+            </div>
+
+            {displayComments}
+
         </div>
     )
 } 

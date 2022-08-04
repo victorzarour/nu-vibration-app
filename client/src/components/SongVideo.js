@@ -3,8 +3,8 @@ import CommentForm from './CommentForm';
 import Comment from './Comment';
 import { useState, useEffect } from "react";
 
-const SongVideo = ( { songVideo, opts, onHandleDelete} ) => {
-  const [addedComments, setAddedComments] = useState([])
+const SongVideo = ( { songVideo, opts, onHandleDelete, currentUser } ) => {
+  const [songVideoComments, setSongVideoComments] = useState([])
   const { id, title, video_url, comments, user } = songVideo
 
   let videoId
@@ -14,7 +14,7 @@ const SongVideo = ( { songVideo, opts, onHandleDelete} ) => {
       fetch(`/song_videos/${id}`)
       .then((r) => r.json())
       .then(songVideo => {
-          setAddedComments([...songVideo.added_comments])
+          setSongVideoComments([...songVideo.song_video_comments])
       })
   }, [id])
 
@@ -26,40 +26,48 @@ const SongVideo = ( { songVideo, opts, onHandleDelete} ) => {
   }
 
   function onAddComment(newComment){
-      setAddedComments([...addedComments, newComment])
+      setSongVideoComments([...songVideoComments, newComment])
   }
 
   function handleDeleteComment(id) {
-    const deleteComment = addedComments.filter((comment) => comment.id !== id)
-    setAddedComments(deleteComment) 
-    fetch(`/added_comments/${id}`, {
+    const deleteComment = songVideoComments.filter((comment) => comment.id !== id)
+    setSongVideoComments(deleteComment) 
+    fetch(`/song_video_comments/${id}`, {
         method:'DELETE'
       })
   }
 
-  function onUpdateComment(updatedAddedComment) {
-  const updatedAddedComments = addedComments.map(addedComment => {
-    if (addedComment.id === updatedAddedComment.id) {
-      return updatedAddedComment
+  function onUpdateComment(updatedSongVideoComment) {
+  const updatedsongVideoComments = songVideoComments.map(songVideoComment => {
+    if (songVideoComment.id === updatedSongVideoComment.id) {
+      return updatedSongVideoComment
     } else {
-      return addedComment
+      return songVideoComment
     }
   })
-  setAddedComments(updatedAddedComments)
+  setSongVideoComments(updatedsongVideoComments)
   }
 
+  let displayDelete
+  currentUser && currentUser.id === user.id ? 
+    displayDelete = <button onClick={handleDelete}>DELETE</button>
+    :
+    displayDelete = null
 
   return (
     <div>
+
       <p>By {user.username}</p>
       <p>{title}</p>
-      <p>{comments}</p>      
-      <button onClick={handleDelete}>DELETE</button>
+      <p>{comments}</p>  
+
+      {displayDelete}
+      
       <YouTube videoId={videoId} opts={opts} className="song_video"/>
-      {addedComments.map(addedComment => <Comment key={addedComment} addedComment={addedComment} handleDeleteComment={handleDeleteComment} onUpdateComment={onUpdateComment} />)}
-      <CommentForm onAddComment={onAddComment} songVideoId={id} />
+      
+      {songVideoComments.map(songVideoComment => <Comment key={songVideoComment} songVideoComment={songVideoComment} handleDeleteComment={handleDeleteComment} onUpdateComment={onUpdateComment} currentUser={currentUser} />)}
 
-
+      <CommentForm onAddComment={onAddComment} songVideoId={id} currentUser={currentUser} />
 
     </div>
   );

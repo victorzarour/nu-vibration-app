@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :user_artists
   has_many :user_albums
   has_many :user_songs
+  has_many :added_comments
 
   has_secure_password
 end

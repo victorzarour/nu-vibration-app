@@ -1,53 +1,47 @@
 import { useState } from "react";
 
-function CommentForm( { onAddComment, songVideoId } ) {
+function CommentForm( { onAddComment, songVideoId, currentUser } ) {
     
-    const [formData, setFormData] = useState({
-        name: "",
-        body: "",
-        song_video_id: songVideoId
-      })
+    const [body, setBody] = useState("")
     
       function handleChange(e){
-        const { name, value } = e.target
-        setFormData({...formData, [name]: value})
-        console.log(formData)
+        setBody(e.target.value)
       }
 
       function handleSubmit(e){
         e.preventDefault();
-        fetch('/added_comments', {
+        fetch('/song_video_comments', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
                 Accept:"application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify({
+              user_id: currentUser.id,
+              body: body,
+              song_video_id: songVideoId
+            }),
         })
         .then(r => r.json())
-        .then(comment => onAddComment(comment))
-        setFormData({
-            name: "",
-            body: "",
-            song_video_id: songVideoId
-          })
+        .then(video_comment => onAddComment(video_comment))
+        setBody("")
       }
 
     return (
       <div className='commentForm'>
-        <form onSubmit={handleSubmit}>
-          <h2>Feel free to add your own comment!</h2>
 
-          <div> 
-            <input className='input' type="text" id="name" placeholder="Name..." name="name" value={formData.name} onChange={handleChange}/>
-          </div>
+        { currentUser ? 
+          <form onSubmit={handleSubmit}>
+            <h2>Feel free to add your own comment!</h2>
 
-          <div> 
-            <textarea className='textarea' id="body" name="body" placeholder="Write something..." value={formData.body} onChange={handleChange} style={{height:200}}></textarea>
-          </div>
+            <div> 
+              <textarea className='textarea' id="body" name="body" placeholder="Write something..." value={body} onChange={handleChange} style={{height:100}}></textarea>
+            </div>
 
-          <button type="submit">Submit</button>
-        </form>
+            <button type="submit">Submit</button>
+          </form>
+          : null }
+
       </div>
     );
   }

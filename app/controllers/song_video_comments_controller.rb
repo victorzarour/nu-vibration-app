@@ -1,9 +1,9 @@
-class AddedCommentsController < ApplicationController
+class SongVideoCommentsController < ApplicationController
     before_action :find_comment, only: [:show, :update, :destroy]
     skip_before_action :authorized_user
 
         def index
-            render json: AddedComment.all
+            render json: SongVideoComment.all
         end
 
         def show
@@ -11,7 +11,7 @@ class AddedCommentsController < ApplicationController
         end
     
         def create
-            comment = AddedComment.create!(comment_params)
+            comment = SongVideoComment.create!(comment_params)
             render json: comment, status: :created
         end
     
@@ -28,11 +28,11 @@ class AddedCommentsController < ApplicationController
         private
     
         def comment_params
-            params.permit(:name, :body, :song_video_id)
+            params.permit(:user_id, :body, :song_video_id)
         end
     
         def find_comment
-            @comment = AddedComment.find(params[:id])
+            @comment = SongVideoComment.find(params[:id])
         end
     
 end
