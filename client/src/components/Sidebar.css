@@ -16,14 +16,12 @@
   padding-right: 10px;
 }
 
-.nav-menu-items a{
+.nav-menu-items a {
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-size: 14px;
 }
-
-
 
 .nav-menu-items p{
   padding: 6px;
@@ -43,4 +41,5 @@
   font-weight: bold;
   font-size: 12px;
   margin: 25px 0;
+  letter-spacing: .6px;
 }

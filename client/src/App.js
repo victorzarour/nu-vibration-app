@@ -18,6 +18,7 @@ const App = () => {
   const [ currentUser, setCurrentUser ] = useState(false);
   const [albums, setAlbums] = useState([]);
   const [artists, setArtists] = useState([])
+  const [search, setSearch] = useState("")
 
   // Check if current user is authorized and set to current user
   useEffect(() => {
@@ -49,6 +50,13 @@ const App = () => {
     .then(artists => setArtists(artists))
   }, [])
 
+  const allAlbums = albums.filter(album => album.title.toLowerCase().includes(search.toLowerCase()))
+  const allArtists = artists.filter(artist => artist.name.toLowerCase().includes(search.toLowerCase()))
+
+  function handleSearch(e){
+    setSearch(e.target.value)
+  }
+  
   return (
     <div className="player">
       <Sidebar
@@ -57,16 +65,16 @@ const App = () => {
       />
       <Switch>
           <Route exact path="/">
-            <Home albums={ albums }/>
+            <Home handleSearch={handleSearch} search={search} allAlbums={allAlbums}/>
           </Route>
           <Route exact path="/artists">
-            <AllArtistsPage currentUser={ currentUser } artists={artists}/>
+            <AllArtistsPage currentUser={currentUser} handleSearch={handleSearch} search={search} allArtists={allArtists}/>
           </Route>
           <Route exact path="/myartists">
             <MyArtists currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums">
-            <AllAlbumsPage currentUser={currentUser} albums={ albums }/>
+            <AllAlbumsPage currentUser={currentUser} handleSearch={handleSearch} search={search} allAlbums={allAlbums}/>
           </Route>
           <Route exact path="/albums/:id">
             <AlbumDetails currentUser={currentUser}/>

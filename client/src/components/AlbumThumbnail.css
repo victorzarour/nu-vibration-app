@@ -61,3 +61,22 @@
     background-color: lightgray;
     cursor: pointer;
 }
+
+.column_one{
+    float: left;
+    width: 85%;
+}
+
+.column_two{
+    left: 30px;
+    top: 15px;
+    position: relative;
+}
+
+.fa-solid{
+    transition: .1s;
+}
+
+.fa-solid:active{
+    transform: scale(2);
+}

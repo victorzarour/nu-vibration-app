@@ -20,7 +20,7 @@ const Sidebar = ( { currentUser, setCurrentUser } ) => {
     <div className='sidebar'>
       <nav className='nav-menu-items'>
 
-        { currentUser ? "Welcome, " + currentUser.username : ""}
+        { currentUser ? <span className="my_collection">{"WELCOME, " + currentUser.username.toUpperCase()}</span> : ""}
 
         { currentUser ?
           <NavLink to='/logout' onClick={ handleLogout }>

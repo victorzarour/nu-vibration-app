@@ -31,11 +31,15 @@ const AlbumThumbnail = ( { album, currentUser } ) => {
             alt={album.title}
             className="thumbnail_image"/>
       <div className="thumbnail_info">
-        <NavLink exact to={`/albums/${album.id}`}>
-          <h3>{truncate(album.title, 18)}</h3>
-        </NavLink>
-        <p>{album.year}</p>
-        <i class="fa-solid fa-heart" onClick={handleAddAlbum}></i>
+        <div className="column_one">
+          <NavLink exact to={`/albums/${album.id}`}>
+            <h3>{truncate(album.title, 15)}</h3>
+          </NavLink>
+          <p>{album.year}</p>
+        </div>
+        <div className="column_two">
+          <i class="fa-solid fa-heart" onClick={handleAddAlbum}></i>
+        </div>
       </div>
   </div>
   );

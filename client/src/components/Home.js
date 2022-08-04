@@ -1,29 +1,28 @@
-import { useState, useEffect } from 'react';
 import Row from "./Row";
 import "./Home.css";
 
-const Home = ( { albums } ) => {
+const Home = ( { handleSearch, search, allAlbums } ) => {
 
-  const highestRated = albums.filter(album => album.pitchfork_rating > 7)
+  const highestRated = allAlbums.filter(album => album.pitchfork_rating > 7)
 
-  const pop = albums.filter(album => album.genre.toLowerCase().includes("pop"))
+  const pop = allAlbums.filter(album => album.genre.toLowerCase().includes("pop"))
 
-  const latin = albums.filter(album => album.genre.toLowerCase().includes("latin"))
+  const latin = allAlbums.filter(album => album.genre.toLowerCase().includes("latin"))
 
-  const reggaeton = albums.filter(album => album.genre.toLowerCase().includes("reggaeton"))
+  const reggaeton = allAlbums.filter(album => album.genre.toLowerCase().includes("reggaeton"))
 
-  const rnb = albums.filter(album => album.genre.toLowerCase().includes("r&b"))
+  const rnb = allAlbums.filter(album => album.genre.toLowerCase().includes("r&b"))
 
-  const disco = albums.filter(album => album.genre.toLowerCase().includes("disco"))
+  const disco = allAlbums.filter(album => album.genre.toLowerCase().includes("disco"))
 
-  const rap = albums.filter(album => album.genre.toLowerCase().includes("rap"))
+  const rap = allAlbums.filter(album => album.genre.toLowerCase().includes("rap"))
 
-  const rock = albums.filter(album => album.genre.toLowerCase().includes("rock"))
+  const rock = allAlbums.filter(album => album.genre.toLowerCase().includes("rock"))
 
   return (
     <div className="body">
         <form className="search_bar">
-          <input className="input-search" type="text" placeholder="Search.." name="search"/>
+          <input className="input-search" type="text" placeholder="Search.." name="search" value={search} onChange={handleSearch}/>
         </form>
         <Row title="Highest Rated" albums={highestRated} />
         <Row title="Pop" albums={pop} />
