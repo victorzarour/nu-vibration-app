@@ -5,7 +5,7 @@ import ArtistBanner from "./ArtistBanner";
 import "./ArtistPage.css";
 
 
-const ArtistPage = () => {
+const ArtistPage = ( { currentUser }) => {
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [artist, setArtist] = useState([])
@@ -22,15 +22,13 @@ const ArtistPage = () => {
 
 if (!isLoaded) return <h2>Loading...</h2>
 
-const {name, image, bio, albums} = artist
-
 
   return (
     <div className="artist_body">
       <ArtistBanner artist={artist}/>
       <div className="albums_container">
         {artist.albums.map(album =>
-            <AlbumThumbnail album={album}/>
+            <AlbumThumbnail album={album} currentUser={currentUser}/>
           )}
       </div>
     </div>

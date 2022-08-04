@@ -21,9 +21,12 @@ const Home = ( { handleSearch, search, allAlbums } ) => {
 
   return (
     <div className="body">
-        <form className="search_bar">
-          <input className="input-search" type="text" placeholder="Search.." name="search" value={search} onChange={handleSearch}/>
-        </form>
+      
+      <form action="" className="searchbar">
+        <input type="search" required name="search" value={search} onChange={handleSearch}/>
+          <i class="fa fa-search"></i>
+      </form>
+
         <Row title="Highest Rated" albums={highestRated} />
         <Row title="Pop" albums={pop} />
         <Row title="Latin" albums={latin} />

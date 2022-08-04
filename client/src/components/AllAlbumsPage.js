@@ -6,13 +6,16 @@ const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums, userAlbu
 
   return (
     <div className="all_albums_body">
-      <form className="search_bar">
-        <input className="input-search" type="text" placeholder="Search.." name="search" value={search} onChange={handleSearch} />
+
+      <form action="" className="searchbar">
+        <input type="search" required name="search" value={search} onChange={handleSearch}/>
+          <i class="fa fa-search"></i>
       </form>
+      
       <h1>Albums</h1>
       <div className="albums_container">
       {allAlbums.map(album =>
-          <AlbumThumbnail album={album} currentUser={currentUser} userAlbums={userAlbums} setUserAlbums={setUserAlbums} />
+          <AlbumThumbnail album={album} currentUser={currentUser} />
           )}
       </div>
     </div> 

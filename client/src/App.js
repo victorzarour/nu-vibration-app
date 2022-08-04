@@ -51,8 +51,6 @@ const App = () => {
     .then(artists => setArtists(artists))
   }, [])
 
-  
-
   const allAlbums = albums.filter(album => album.title.toLowerCase().includes(search.toLowerCase()))
   const allArtists = artists.filter(artist => artist.name.toLowerCase().includes(search.toLowerCase()))
 
@@ -86,7 +84,7 @@ const App = () => {
             <MyAlbums currentUser={currentUser} userAlbums={userAlbums} setUserAlbums={setUserAlbums}/>
           </Route>
           <Route exact path="/artists/:id">
-            <ArtistPage />
+            <ArtistPage currentUser={currentUser}/>
           </Route>
           <Route exact path="/songs/:id">
             <SongDetails currentUser={ currentUser }/>

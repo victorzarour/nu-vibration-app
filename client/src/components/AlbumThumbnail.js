@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./AlbumThumbnail.css"
 
 const AlbumThumbnail = ( { album, currentUser } ) => {
-const [userAlbums, setUserAlbums] = useState([])
 const [liked, setLiked] = useState(false)
 
   function truncate(str, n) {
@@ -26,14 +25,16 @@ const [liked, setLiked] = useState(false)
     })
   }
 
+  const { id, image, title } = album
+
   return (
     <div className="thumbnail_container">
 
       <NavLink exact to={`/albums/${album.id}`}>
         <img 
-              key={album.id} 
-              src={album.image} 
-              alt={album.title}
+              key={id} 
+              src={image} 
+              alt={title}
               className="thumbnail_image"/>
       </NavLink>
 
@@ -43,11 +44,11 @@ const [liked, setLiked] = useState(false)
           <NavLink exact to={`/albums/${album.id}`}>
             <h3>{truncate(album.title, 14)}</h3>
           </NavLink>
-          <p>{album.artist.name}</p>
+            {/* <p>{album.artist.name}</p> */}
         </div>
 
         <div className="column_two">
-          { currentUser ? <i class={ liked ? "fa-solid fa-heart liked" : "fa-solid fa-heart"} onClick={handleAddAlbum}></i> : null }
+          { currentUser ? <i class={ liked ? "fa-solid fa-heart albumheart liked" : "fa-solid fa-heart albumheart"} onClick={handleAddAlbum}></i> : null }
         </div>
 
       </div>

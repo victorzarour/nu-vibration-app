@@ -22,7 +22,7 @@
     margin-right: 20px;
     border-radius: 10px;
     padding: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 8px;
     transition: 500ms;
     float: left;
     margin-bottom: 30px;
@@ -73,7 +73,7 @@
 
 .column_two{
     left: 30px;
-    top: 15px;
+    top: 3px;
     position: relative;
 }
 
@@ -93,5 +93,9 @@
 
 .liked{
     color: red;
+}
+
+.fa-heart{
+    margin-top: 5px;
 }
 

@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
     skip_before_action :authorized_user
 
     def index
-        render json: Album.all
+        render json: Album.all.order(:title)
     end
 
     def show

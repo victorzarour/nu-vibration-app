@@ -6,8 +6,10 @@ const AllArtistsPage = ( { currentUser, handleSearch, search, allArtists } ) => 
 
   return (
     <div className="all_artists_body">
-      <form className="search_bar">
-        <input className="input-search" type="text" placeholder="Search.." name="search" value={search} onChange={handleSearch}/>
+
+      <form action="" className="searchbar">
+        <input type="search" required name="search" value={search} onChange={handleSearch}/>
+          <i class="fa fa-search"></i>
       </form>
 
       <h1>Artists</h1>
