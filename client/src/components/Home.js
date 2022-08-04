@@ -17,7 +17,7 @@ const Home = () => {
 
   const latin = albums.filter(album => album.genre.toLowerCase().includes("latin"))
 
-  const reggaeton = albums.filter(album => album.genre.toLowerCase().includes("reggeaton"))
+  const reggaeton = albums.filter(album => album.genre.toLowerCase().includes("reggaeton"))
 
   const rnb = albums.filter(album => album.genre.toLowerCase().includes("r&b"))
 
