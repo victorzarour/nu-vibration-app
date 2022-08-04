@@ -1,5 +1,5 @@
 class UserArtistSerializer < ActiveModel::Serializer
-  attributes :artist
+  attributes :id, :artist
   has_one :user
   has_one :artist
 end

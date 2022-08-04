@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import "./SongRow.css";
 
-const MySongRow = ( { song } ) => {
+const MySongRow = ( { userSong, onDeleteUserSong } ) => {
 
     const [videoUrl, setVideoUrl] = useState("")
     const [artist, setArtist] = useState([])
+    const { id, song } = userSong
     const { artist_id } = song
 
     useEffect(() => {
@@ -35,6 +36,13 @@ const MySongRow = ( { song } ) => {
             }
     }
 
+    function handleDeleteUserSong() {
+        fetch(`/user_songs/${id}`, {
+            method:'DELETE'
+          })
+        onDeleteUserSong(id)
+      }
+
 
     return (
         <div className="songRow">
@@ -51,6 +59,7 @@ const MySongRow = ( { song } ) => {
             <NavLink exact to={`/artists/${artist.id}`}>
                 <p>{artist.name}</p>
             </NavLink>
+            <i class="fa-solid fa-minus" onClick={handleDeleteUserSong}></i>
 
           </div>
         </div>

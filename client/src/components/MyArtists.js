@@ -5,19 +5,23 @@ const MyArtists = ( { currentUser } ) => {
 
 const [userArtists, setUserArtists] = useState([])
 
-    useEffect(() => {
-        fetch(`/users/${currentUser.id}`)
-        .then(res => res.json())
-        .then(user => setUserArtists(user.user_artists))
-    }, [])
+  useEffect(() => {
+      fetch(`/users/${currentUser.id}`)
+      .then(res => res.json())
+      .then(user => setUserArtists(user.user_artists))
+  }, [])
 
-    const destructured = userArtists.map(artist => artist.artist)
+  function onDeleteUserArtist(id) {
+    const deleted = userArtists.filter(userArtist => userArtist
+    .id !== id)
+    setUserArtists(deleted) 
+  }
 
   return (
     <div className="all_artists_body">
       <h1>My Artists</h1>
         <div className="albums_container">
-          {destructured.map(artist => <MyArtistThumbnail artist={artist} />)}
+          {userArtists.map(userArtist => <MyArtistThumbnail userArtist={userArtist} onDeleteUserArtist={onDeleteUserArtist}/>)}
         </div>
     </div>
   );
