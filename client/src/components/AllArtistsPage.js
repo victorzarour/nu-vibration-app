@@ -4,22 +4,7 @@ import ArtistThumbnail from "./ArtistThumbnail";
 import "./AllArtistsPage.css";
 
 
-const AllArtistsPage = ( {currentUser} ) => {
-
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [artists, setArtists] = useState([])
-  const { id } = useParams();
-
-  useEffect(() => {
-    fetch(`/artists`)
-    .then((r) => r.json())
-    .then(artists => {
-      setArtists(artists);
-      setIsLoaded(true)
-    })
-  }, [id])
-
-if (!isLoaded) return <h2>Loading...</h2>
+const AllArtistsPage = ( { currentUser, artists } ) => {
 
   return (
     <div className="all_artists_body">

@@ -53,8 +53,16 @@ const songVideoArray = songVideos.map(songVideo => <SongVideo key={songVideo} so
         <p>{song.about}</p>
       </div>
       <YouTube videoId={videoId} opts={opts} className="song_video"/>
-      <h2>Add a Live Performance or Cover!</h2> 
-      <SongVideoForm id={id} currentUser={currentUser} addSongVideos={addSongVideos}/> 
+
+      { currentUser ? 
+        <div>
+          <h2>Add a Live Performance or Cover!</h2> 
+           <SongVideoForm id={id} currentUser={currentUser} addSongVideos={addSongVideos}/> 
+        </div>
+        :
+        <h2>Sign Up to Add a Live Performance or Cover!</h2> } 
+      
+      
       <div>
           {songVideoArray}
       </div>     

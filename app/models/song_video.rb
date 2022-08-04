@@ -4,5 +4,5 @@ class SongVideo < ApplicationRecord
 
   belongs_to :user
   belongs_to :song
-  has_many :added_comments
+  has_many :added_comments, dependent: :destroy
 end

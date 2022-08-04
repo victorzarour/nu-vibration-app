@@ -20,6 +20,8 @@ const Sidebar = ( { currentUser, setCurrentUser } ) => {
     <div className='sidebar'>
       <nav className='nav-menu-items'>
 
+        { currentUser ? "Welcome, " + currentUser.username : ""}
+
         { currentUser ?
           <NavLink to='/logout' onClick={ handleLogout }>
           <p><span>Logout</span></p>

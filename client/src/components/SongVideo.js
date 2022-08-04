@@ -4,53 +4,54 @@ import Comment from './Comment';
 import { useState, useEffect } from "react";
 
 const SongVideo = ( { songVideo, opts, onHandleDelete} ) => {
-const [addedComments, setAddedComments] = useState([])
-const { id, title, video_url, comments } = songVideo
+  const [addedComments, setAddedComments] = useState([])
+  const { id, title, video_url, comments, user } = songVideo
 
-let videoId
-video_url.startsWith("https://youtu.be") ? videoId = video_url.slice(17, 28) : videoId = video_url.slice(32, 43)
+  let videoId
+  video_url.startsWith("https://youtu.be") ? videoId = video_url.slice(17, 28) : videoId = video_url.slice(32, 43)
 
-useEffect(() => {
-    fetch(`/song_videos/${id}`)
-    .then((r) => r.json())
-    .then(songVideo => {
-        setAddedComments([...songVideo.added_comments])
-    })
-}, [id])
+  useEffect(() => {
+      fetch(`/song_videos/${id}`)
+      .then((r) => r.json())
+      .then(songVideo => {
+          setAddedComments([...songVideo.added_comments])
+      })
+  }, [id])
 
-function handleDelete() {
-  fetch(`/song_videos/${id}`, {
-    method: 'DELETE'
-  });
-  onHandleDelete(id)
-}
-
-function onAddComment(newComment){
-    setAddedComments([...addedComments, newComment])
-}
-
-function handleDeleteComment(id) {
-   const deleteComment = addedComments.filter((comment) => comment.id !== id)
-   setAddedComments(deleteComment) 
-  fetch(`/added_comments/${id}`, {
-      method:'DELETE'
-    })
-}
-
-function onUpdateComment(updatedAddedComment) {
- const updatedAddedComments = addedComments.map(addedComment => {
-  if (addedComment.id === updatedAddedComment.id) {
-    return updatedAddedComment
-  } else {
-    return addedComment
+  function handleDelete() {
+    fetch(`/song_videos/${id}`, {
+      method: 'DELETE'
+    });
+    onHandleDelete(id)
   }
- })
- setAddedComments(updatedAddedComments)
-}
+
+  function onAddComment(newComment){
+      setAddedComments([...addedComments, newComment])
+  }
+
+  function handleDeleteComment(id) {
+    const deleteComment = addedComments.filter((comment) => comment.id !== id)
+    setAddedComments(deleteComment) 
+    fetch(`/added_comments/${id}`, {
+        method:'DELETE'
+      })
+  }
+
+  function onUpdateComment(updatedAddedComment) {
+  const updatedAddedComments = addedComments.map(addedComment => {
+    if (addedComment.id === updatedAddedComment.id) {
+      return updatedAddedComment
+    } else {
+      return addedComment
+    }
+  })
+  setAddedComments(updatedAddedComments)
+  }
 
 
   return (
     <div>
+      <p>By {user.username}</p>
       <p>{title}</p>
       <p>{comments}</p>      
       <button onClick={handleDelete}>DELETE</button>

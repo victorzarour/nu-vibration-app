@@ -4,8 +4,7 @@ function SongVideoForm( { id, currentUser, addSongVideos } ) {
 
 
     const [formData, setFormData] = useState({
-        // FIX USER ID ONCE AUTHENTICATION WORKS
-        user_id: 1,
+        user_id: currentUser.id,
         song_id: id, 
         title: "",
         video_url: "",
@@ -42,9 +41,6 @@ function SongVideoForm( { id, currentUser, addSongVideos } ) {
     return (
       <div className='songVideoForm'>
         <form onSubmit={handleSubmit}>
-          <div> 
-            <input className='input' type="text" id="user_id" placeholder="Username..." name="name" value={formData.user_id} onChange={handleChange}/>
-          </div>
 
           <div> 
             <input className='input' type="text" id="title" placeholder="Title..." name="title" value={formData.title} onChange={handleChange}/>

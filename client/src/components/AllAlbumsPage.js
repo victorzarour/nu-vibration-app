@@ -4,22 +4,7 @@ import AlbumThumbnail from "./AlbumThumbnail";
 import "./AlbumThumbnail.css";
 
 
-const AllAlbumsPage = ( {currentUser}) => {
-
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [albums, setAlbums] = useState([])
-  const { id } = useParams();
-
-  useEffect(() => {
-    fetch(`/albums`)
-    .then((r) => r.json())
-    .then(albums => {
-      setAlbums(albums);
-      setIsLoaded(true)
-    })
-  }, [id])
-
-if (!isLoaded) return <h2>Loading...</h2>
+const AllAlbumsPage = ( { currentUser, albums }) => {
 
   return (
     <div className="all_albums_body">

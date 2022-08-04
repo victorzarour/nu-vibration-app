@@ -16,6 +16,8 @@ import MyAlbums from './components/MyAlbums';
 
 const App = () => {
   const [ currentUser, setCurrentUser ] = useState(false);
+  const [albums, setAlbums] = useState([]);
+  const [artists, setArtists] = useState([])
 
   // Check if current user is authorized and set to current user
   useEffect(() => {
@@ -35,6 +37,18 @@ const App = () => {
     })
   },[]);
 
+  useEffect(() => {
+    fetch('/albums')
+    .then(res => res.json())
+    .then(albums => setAlbums(albums))
+  }, []);
+
+  useEffect(() => {
+    fetch(`/artists`)
+    .then((r) => r.json())
+    .then(artists => setArtists(artists))
+  }, [])
+
   return (
     <div className="player">
       <Sidebar
@@ -43,16 +57,16 @@ const App = () => {
       />
       <Switch>
           <Route exact path="/">
-            <Home />
+            <Home albums={ albums }/>
           </Route>
           <Route exact path="/artists">
-            <AllArtistsPage currentUser={currentUser}/>
+            <AllArtistsPage currentUser={ currentUser } artists={artists}/>
           </Route>
           <Route exact path="/myartists">
             <MyArtists currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums">
-            <AllAlbumsPage currentUser={currentUser}/>
+            <AllAlbumsPage currentUser={currentUser} albums={ albums }/>
           </Route>
           <Route exact path="/albums/:id">
             <AlbumDetails currentUser={currentUser}/>

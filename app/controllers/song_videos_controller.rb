@@ -2,6 +2,10 @@ class SongVideosController < ApplicationController
 before_action :find_song_video, only: [:show, :destroy]
 skip_before_action :authorized_user
 
+    def index
+        render json: SongVideo.all
+    end
+
     def show
         render json: @song_video
     end
