@@ -15,10 +15,11 @@ import MySongs from './components/MySongs';
 import MyAlbums from './components/MyAlbums';
 
 const App = () => {
-  const [ currentUser, setCurrentUser ] = useState(false);
-  const [albums, setAlbums] = useState([]);
+  const [ currentUser, setCurrentUser ] = useState(false)
+  const [albums, setAlbums] = useState([])
   const [artists, setArtists] = useState([])
   const [search, setSearch] = useState("")
+  const [userAlbums, setUserAlbums] = useState([])
 
   // Check if current user is authorized and set to current user
   useEffect(() => {
@@ -50,6 +51,8 @@ const App = () => {
     .then(artists => setArtists(artists))
   }, [])
 
+  
+
   const allAlbums = albums.filter(album => album.title.toLowerCase().includes(search.toLowerCase()))
   const allArtists = artists.filter(artist => artist.name.toLowerCase().includes(search.toLowerCase()))
 
@@ -74,13 +77,13 @@ const App = () => {
             <MyArtists currentUser={currentUser}/>
           </Route>
           <Route exact path="/albums">
-            <AllAlbumsPage currentUser={currentUser} handleSearch={handleSearch} search={search} allAlbums={allAlbums}/>
+            <AllAlbumsPage currentUser={currentUser} handleSearch={handleSearch} search={search} allAlbums={allAlbums} userAlbums={userAlbums} />
           </Route>
           <Route exact path="/albums/:id">
             <AlbumDetails currentUser={currentUser}/>
           </Route>
           <Route exact path="/myalbums">
-            <MyAlbums currentUser={currentUser}/>
+            <MyAlbums currentUser={currentUser} userAlbums={userAlbums} setUserAlbums={setUserAlbums}/>
           </Route>
           <Route exact path="/artists/:id">
             <ArtistPage />

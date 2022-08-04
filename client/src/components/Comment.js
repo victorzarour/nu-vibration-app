@@ -16,8 +16,7 @@ function Comment( { songVideoComment, handleDeleteComment, onUpdateComment, curr
 
     function handleSubmit(e) {
         e.preventDefault()
-
-        fetch(`/added_comments/${id}`, {
+        fetch(`/song_video_comments/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

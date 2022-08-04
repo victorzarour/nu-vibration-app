@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import AlbumThumbnail from './AlbumThumbnail';
 import MyAlbumThumbnail from './MyAlbumThumbnail';
-import MyArtistThumbnail from './MyArtistThumbnail';
 
 const MyAlbums = ( { currentUser } ) => {
 

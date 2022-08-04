@@ -32,10 +32,13 @@ const ArtistThumbnail = ( { artist, currentUser } ) => {
             alt={artist.name}
             className="artist_thumbnail_image"/>
       <div className="artist_thumbnail_info">
+      <div>
+        
+      </div>
         <NavLink exact to={`/artists/${artist.id}`}>
           <h3>{truncate(artist.name, 16)}</h3>
         </NavLink>
-        <i class="fa-solid fa-heart" onClick={handleAddArtist}></i>
+        { currentUser ? <i class="fa-solid fa-heart" onClick={handleAddArtist}></i> : null }
       </div>
   </div>
   );

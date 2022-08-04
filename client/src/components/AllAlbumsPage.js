@@ -2,7 +2,7 @@ import AlbumThumbnail from "./AlbumThumbnail";
 import "./AlbumThumbnail.css";
 
 
-const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums }) => {
+const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums, userAlbums, setUserAlbums }) => {
 
   return (
     <div className="all_albums_body">
@@ -12,7 +12,7 @@ const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums }) => {
       <h1>Albums</h1>
       <div className="albums_container">
       {allAlbums.map(album =>
-          <AlbumThumbnail album={album} currentUser={currentUser}/>
+          <AlbumThumbnail album={album} currentUser={currentUser} userAlbums={userAlbums} setUserAlbums={setUserAlbums} />
           )}
       </div>
     </div> 

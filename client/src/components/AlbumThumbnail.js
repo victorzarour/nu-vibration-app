@@ -1,7 +1,10 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./AlbumThumbnail.css"
 
 const AlbumThumbnail = ( { album, currentUser } ) => {
+const [userAlbums, setUserAlbums] = useState([])
+const [liked, setLiked] = useState(false)
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -33,12 +36,12 @@ const AlbumThumbnail = ( { album, currentUser } ) => {
       <div className="thumbnail_info">
         <div className="column_one">
           <NavLink exact to={`/albums/${album.id}`}>
-            <h3>{truncate(album.title, 15)}</h3>
+            <h3>{truncate(album.title, 14)}</h3>
           </NavLink>
           <p>{album.year}</p>
         </div>
         <div className="column_two">
-          <i class="fa-solid fa-heart" onClick={handleAddAlbum}></i>
+          { currentUser ? <i class={ liked ? "fa-solid fa-heart liked" : "fa-solid fa-heart"} onClick={handleAddAlbum}></i> : null }
         </div>
       </div>
   </div>
