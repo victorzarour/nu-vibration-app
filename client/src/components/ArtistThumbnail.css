@@ -8,13 +8,14 @@
     margin-right: 20px;
     border-radius: 10px;
     padding: 19px;
-    padding-bottom: 18px;
+    padding-bottom: 11px;
     transition: 500ms;
     float: left;
     margin-bottom: 30px;
 }
 
 .artist_thumbnail_info {
+    margin-top: 2px;
     width: 80%;
     margin-left: 2px;
 }
@@ -26,6 +27,10 @@
 
 .artist_thumbnail_info h3:hover{
     text-decoration: underline;
+}
+
+.artist_thumbnail_info h3:active{
+    color: black;
 }
 
 .artist_thumbnail_info a{

@@ -24,13 +24,21 @@ const MyArtistThumbnail = ( { userArtist, onDeleteUserArtist } ) => {
             alt={artist.name}
             className="artist_thumbnail_image"/>
       <div className="artist_thumbnail_info">
-        <NavLink exact to={`/artists/${artist.id}`}>
+
+      <div className="column_one">
+         <NavLink exact to={`/artists/${artist.id}`}>
           <h3>{truncate(artist.name, 16)}</h3>
         </NavLink>
+      </div>
+      
+      <div className="column_two_artist">
         <i class="fa-solid fa-minus" onClick={handleDeleteUserArtist}></i>
+      </div>
+
       </div>
   </div>
   );
 };
+
 
 export default MyArtistThumbnail;

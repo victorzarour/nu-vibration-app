@@ -28,21 +28,28 @@ const [liked, setLiked] = useState(false)
 
   return (
     <div className="thumbnail_container">
+
+      <NavLink exact to={`/albums/${album.id}`}>
         <img 
-            key={album.id} 
-            src={album.image} 
-            alt={album.title}
-            className="thumbnail_image"/>
+              key={album.id} 
+              src={album.image} 
+              alt={album.title}
+              className="thumbnail_image"/>
+      </NavLink>
+
       <div className="thumbnail_info">
+
         <div className="column_one">
           <NavLink exact to={`/albums/${album.id}`}>
             <h3>{truncate(album.title, 14)}</h3>
           </NavLink>
-          <p>{album.year}</p>
+          <p>{album.artist.name}</p>
         </div>
+
         <div className="column_two">
           { currentUser ? <i class={ liked ? "fa-solid fa-heart liked" : "fa-solid fa-heart"} onClick={handleAddAlbum}></i> : null }
         </div>
+
       </div>
   </div>
   );

@@ -53,13 +53,14 @@ const SongRow = ( { song, artist, currentUser } ) => {
             </NavLink>
 
             <i class="fa-solid fa-play" onClick={() => handleClick(song)}></i>
-
+            <i class="fa-solid fa-heart" onClick={handleAddSong}></i>
+            
             {videoUrl && <YouTube videoId={videoUrl} opts={opts} className="music_video"/>}
 
             <NavLink exact to={`/artists/${artist.id}`}>
                 <p>{artist.name}</p>
             </NavLink>
-            <i class="fa-solid fa-heart" onClick={handleAddSong}></i>
+  
 
           </div>
         </div>

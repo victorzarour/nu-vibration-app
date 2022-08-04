@@ -24,14 +24,23 @@ const MyAlbumThumbnail = ( { userAlbum, onDeleteUserAlbum } ) => {
             alt={album.title}
             className="thumbnail_image"/>
       <div className="thumbnail_info">
-        <NavLink exact to={`/albums/${album.id}`}>
-          <h3>{truncate(album.title, 18)}</h3>
-        </NavLink>
-        <i class="fa-solid fa-minus" onClick={handleDeleteUserAlbum}></i>
-        <p>{album.year}</p>
+
+      <div className="column_one">
+          <NavLink exact to={`/albums/${album.id}`}>
+            <h3>{truncate(album.title, 14)}</h3>
+          </NavLink>
+          <p>{album.year}</p>
+        </div>
+        <div className="column_two">
+          <i class="fa-solid fa-minus" onClick={handleDeleteUserAlbum}></i>
+        </div>
+     
       </div>
+
   </div>
   );
 };
+
+
 
 export default MyAlbumThumbnail;

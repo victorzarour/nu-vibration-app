@@ -42,13 +42,17 @@
     text-decoration: underline;
 }
 
+.thumbnail_info h3:active{
+    color: black;
+}
+
 .thumbnail_info a{
     text-decoration: none;
     color: white;
 }
 
 .thumbnail_info p{
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
 }
 
@@ -70,6 +74,12 @@
 .column_two{
     left: 30px;
     top: 15px;
+    position: relative;
+}
+
+.column_two_artist{
+    left: 32px;
+    top: 3px;
     position: relative;
 }
 
