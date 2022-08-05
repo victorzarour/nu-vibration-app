@@ -2,8 +2,6 @@ import { Button } from "./Button";
 import { FormInput } from "./FormInput";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-
-// import "./LoginForm.css"
 import { SignInContainer } from "../styled/LoginForm.styles";
 
 const LoginForm = ({ setCurrentUser }) => {
@@ -47,7 +45,9 @@ const LoginForm = ({ setCurrentUser }) => {
 
   return (
     <SignInContainer>
-      <form onSubmit={ handleSubmit }>
+      <form className="form" onSubmit={ handleSubmit }>
+        <h1>Welcome back!</h1>
+        <span>Login to continue</span>
         <FormInput
         label="Username"
         type="text"

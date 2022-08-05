@@ -73,7 +73,7 @@ const App = () => {
             <LoginForm setCurrentUser={ setCurrentUser }/>
           </Route>
           <Route exact path="/signup">
-            <SignupForm />
+            <SignupForm setCurrentUser={ setCurrentUser }/>
           </Route>
       </Switch>
     </div>

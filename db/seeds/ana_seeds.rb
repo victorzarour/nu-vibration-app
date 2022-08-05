@@ -1,4 +1,5 @@
 puts "\t🌱 Seeding Ana's Artists... "
+
 bad_bunny = Artist.create(name: "Bad Bunny", image: "https://cdns-images.dzcdn.net/images/artist/f21443a563e5d03ddf83ed1e6a12d581/500x500.jpg", bio: "Benito Antonio Martínez Ocasio (born March 10, 1994), known professionally as Bad Bunny, is a Puerto Rican rapper and singer. His music is often defined as Latin trap and reggaeton, but he has incorporated various other genres into his music, including rock, bachata, and soul. He is also known for his deep, slurred vocal style and his eclectic fashion sense.")
 
 rosalia = Artist.create(name: "Rosalia", image: "http://dev.rosalia.com/wp-content/uploads/2021/01/A-pale-FINALv2-1024x1024.jpg", bio: "Rosalía Vila Tobella(September 25, 1992), known mononymously as Rosalía (stylized in all caps), is a Spanish singer and songwriter. After discovering Spanish folk music at an early age, Rosalía attended Taller de Músics and graduated from the Catalonia College of Music with honors by virtue of her collaborative cover album with Raül Refree, Los Ángeles (2017) and the baccalaureate project El Mal Querer (2018), which is co-produced by El Guincho and mixes modern interpretations of flamenco with pop and urban music. ")
@@ -7,8 +8,32 @@ maluma = Artist.create(name: "Maluma", image: "https://r.lvmh-static.com/uploads
 
 jbalvin = Artist.create(name: "J Balvin", image: "https://media.pitchfork.com/photos/5e3492981054520009102e3b/16:9/w_1856,h_1044,c_limit/J-Balvin.jpg", bio: "José Álvaro Osorio Balvin (born May 7, 1985), known professionally as J Balvin, is a Colombian reggaeton singer. Balvin was born in Medellín, Colombia, where he became interested in music at a young age. At age 17, he moved to the United States and learned English, which influenced the music he would make later. He then returned to Medellín and gained local popularity by performing at various clubs around the city.")
 
+daddy = Artist.create(name:" Daddy Yankee", image: "http://corporate.univision.com/newco/wp-content/uploads/2019/05/Daddy-Yankee_Courtesy-of-Cartel-Records.jpg", bio: "Global music icon, Daddy Yankee is known as the “King of Reggaeton” by music critics and fans alike. He is often cited as an influence by other Latin urban performers. In 2004, released his international hit single “Gasolina”, which is credited with introducing Reggaeton to audiences worldwide, and making the music genre a global phenomenon. Since then, he has sold around 30 million records, making him one of the best-selling Latin music artists. Daddy Yankee's album Barrio Fino made history when it became the top-selling Latin Music Album of the Decade 2000-2009. In 2017, Daddy Yankee, in collaboration with Latin pop singer Luis Fonsi released the hit single “Despacito”. It became the first Spanish-language song to hit number one on the Billboard Hot 100 since 1996. The single gained global success. The video for “Despacito” on YouTube became the most watched video on the platform and top-selling single of the decade 2010-2019. Its success led Daddy Yankee to become the most listened to artist worldwide on the streaming service Spotify in June 2017, the first Latin artist to do so. In 2019, his single “Con Calma” Ft. Snow” became the Top Latin Song of 2019 and Top 10 Most-Listened song globally. It became the #1 Most Watched Video on YouTube generating over 2.4 billion views. Daddy Yankee has won 110 awards and over 300 nominations. He has been named one of the “Most Influential Hispanics” by both Time Magazine and CNN Network. In December, Daddy Yankee kicked off the Holiday season giving a new experience to his fans worldwide by releasing “DY2K20”, a digital version of his unforgettable 12 sold-out shows “Con Calma Pal' Choli”, driving over 1.2 views within the first hour. In addition, in mid-December he fulfilled one of his biggest dreams which was to record with Marc Anthony his favorite Christmas song “De Vuelta Pa' La Vuelta ”. With 300 million views, the song charted #1 on Billboard's Tropical Airplay chart and debuted #5 on the Hot Latin Songs chart. Daddy Yankee also released “Problema”, as his first song of 2021 which has accumulated over 1 billion streams since its initial release. He performed the song on Jimmy Kimmel Live! and the next day on Good Morning America. Most recently, he was awarded Songwriter Of The Year for the third time at the 2021 ASCAP Latin Music Awards and has bestowed with the Billboard Hall of Fame Award becoming the first urban Latino artist to enter. In March he announced his last tour “La Última Vuelta” and his last album “Legendaddy”.")
 
+romeo = Artist.create(name: "Romeo Santos", image: "https://media2.sacurrent.com/sacurrent/imager/u/original/7320427/romeo.jpg", bio: "Anthony 'Romeo' Santos (born July 21, 1981)is an American singer, songwriter, record producer and actor, best known as the lead member and vocalist of the bachata group Aventura. In 2002, the song 'Obsesión' reached number one in Italy for 16 consecutive weeks. He released several albums with Aventura before the group broke up. Since then, Santos has embarked on a solo career which has spawned seven number one songs on the Hot Latin Songs chart and sixteen number ones on the Tropical Songs chart. Over his career, he sold over 40 million albums and over 100 million singles.");
 
+ozuna = Artist.create(name: "Ozuna", image: "https://i8.amplience.net/i/naras/hhm_hero_ozuna_nologo.jpg.jpg?w=821&sm=c", bio: "Juan Carlos Ozuna Rosado, mejor conocido como Ozuna, es un cantante y compositor de reggaetón. Nació el 13 de marzo de 1992 en San Juan, Puerto Rico y es conocido por sus letras positivas, de superación, aludiendo a la vez el cariño que le tiene a su hija.
+
+Es compositor desde los 12 años. Ozuna comenzó su carrera artística en el 2011 bajo el nombre J-Oz “El Mago de Oz”, en donde colaboro con artistas como Lápiz Conciente. Hizo un contrato en 2014 y comenzó a publicar canciones en YouTube. Por el 2015, canciones como “Si No Te Quiere” llegó a ser puesta en radios latinas, dando conciertos en múltiples países.
+
+A comienzos de 2016, Ozuna ganó mucho reconocimiento por aparecer en el sencillo “La Ocasión”, una colaboración junto a DJ Luian, Mambo Kingz, De La Ghetto, Arcángel y Anuel AA.
+El sencillo llegó al puesto número 22 en las Canciones Latinas Más Populares.
+
+En marzo lanzó el “No Quiere Enamorarse (Remix)”, en la que participó la super estrella Daddy Yankee. La canción inmediatamente consiguió millones de vistas en YouTube. En septiembre lanzó su sencillo “Dile Que Tú Me Quieres”, con el que apareció en el puesto número 13 en los Billboard a final de año.
+
+En 2017, su álbum debut Odisea fue lanzado. El sencillo “Tu Foto” llegó a los 650 millones un año después, conviertiéndola en al canción más popular en el sitio, seguida por “Se Preparo” con 620 millones, y “El Farsante” con 590 millones. Actualmente “Se Preparo” es el sencillo más popular del álbum, con un total de 1 millardo de visitas en YouTube (1,178,035,348).
+
+A pesar de su corta permanencia en el género urbano, Ozuna se convertió en un éxito notable, logrando lanzar numerosas canciones que rápidamente se convirtieron en éxitos virales. Como resultado, muchas figuras importantes en el género consideran a Ozuna como uno de los mejores artistas y el más exitoso de la nueva generación de artistas de reggaetón.");
+
+kali = Artist.create(name: "Kali Uchis", image: "https://s2.r29static.com/bin/entry/07d/0,0,2000,2400/960xbm,70/1977791/image.jpg", bio: "Karly-Marina Loaiza (born July 17, 1994), better known as her stage name Kali Uchis, is a Colombian-American singer, songwriter, record producer, music video director, and fashion designer.
+
+Sporting a 50's aesthetic (from which Billie Holiday and Ella Fitzgerald are cited influences), Kali's brand of art pop spans the length of many genres of soul (doo-wop, reggae, funk, quiet storm, psychedelia) with a Latina twist.
+
+Kali grew up playing saxophone and piano; she was introduced to music production and video editing while she was in high school and released her debut project Drunken Babble in 2012. Since then, Kali has gone on to release a 2015 EP, Por Vida, and her debut album, Isolation, in 2018.");
+
+# name = Artist.create(name: "", image: "", bio: "");
+# name = Artist.create(name: "", image: "", bio: "");
+# name = Artist.create(name: "", image: "", bio: "");
 
 puts "\t🌱 Seeding Ana's Albums... "
 
@@ -30,7 +55,16 @@ dj = Album.create(title: "#7DJ", artist: maluma, year: 2021, image: "https://med
 colores = Album.create(title: "Colores", artist: jbalvin, year: 2020, image: "https://media.pitchfork.com/photos/5e72665e5138f7000805348a/1:1/w_320,c_limit/Colores_J%20Balvin.jpg", genre: "Reggaeton/Rap", label: "Universal Music Latino", pitchfork_rating: 7.3,)
 #	pitchfork_review: Complete Review
 
+legendaddy = Album.create(title: "LEGENDADDY", artist: daddy, year: 2022, image: "https://t2.genius.com/unsafe/327x327/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png", genre: "Pop/Reggaeton/latin Urban", pitchfork_rating: 8.8);
 
+utopia = Album.create(title: "Utopía", artist: romeo, year: 2019, image: "https://media.pitchfork.com/photos/5caf5de2f06ec513acac03bd/1:1/w_320,c_limit/RomeoSantos_Utopia.jpg", genre: "Latin/Bachata/Pop/R&B", pitchfork_rating: 8.0);
+
+nibiru = Album.create(title: "Nibiru", artist: ozuna, year: 2019, image: "https://t2.genius.com/unsafe/223x223/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg", genre: "Latin/Pop/Reggaeton", pitchfork_rating: 6.8);
+
+sin_miedo = Album.create(title: "Sin Miedo (del Amor y Otros Demonios) ∞", artist: kali, year: 2020, image: "https://media.pitchfork.com/photos/5fb551797e818f7ad25ead3c/1:1/w_320,c_limit/Sin%20Miedo%20(del%20Amor%20y%20Otros%20Demonios)%20%E2%88%9E_Kali%20Uchis.jpg", genre: "Latin/Pop/R&B", pitchfork_rating: 7.8);
+
+# name = Album.create(title: "", artist: , year: , image: "", genre: "", pitchfork_rating: );
+# name = Album.create(title: "", artist: , year: , image: "", genre: "", pitchfork_rating: );
 
 puts "\t🌱 Seeding Ana's Songs... "
 
@@ -1005,7 +1039,7 @@ songs = [
   {
     title: "TRELLAS",
     year: 2020,
-    artist: el_ultimo,
+    artist: bad_bunny,
     featuring: "",
     album: el_ultimo,
     produced_by: "MAG",
@@ -1069,8 +1103,797 @@ songs = [
     The theme is a Christmas and New Year's song, accompanied by guitars and percussion, among which the congas stand out. In addition to this, in the lyrics the interpreters contrast the way in which rich people and poor people live Christmas, stating that for some it is a time of happiness and for others of sadness.
     This is the only theme from a Bad Bunny album in which he has no participation.",
     music_video: "https://youtu.be/T92wmgRIhno",
+  },
+  {
+    title: "LEGENDADDY",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "OMB, JBD, Play-N-Skillz & Daddy Yankee",
+    written_by: "Bruce Buffer, Michael Buffer & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/327x327/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "'LEGENDADDY' is the intro of Daddy Yankee's latest studio album called, like this track, LEGENDADDY, released on March 24, 2022.
+
+    The track shows us what seems to be the beginning of a Yankee concert, with Michael Buffer introducing it in English while we listen to a screaming audience.",
+    music_video: "https://youtu.be/Yp8_jRMn4YI",
+  },
+  {
+    title: "CAMPEÓN",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Dímelo Flow & Slow Mike",
+    written_by: "Slow Mike, Dímelo Flow & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "'CHAMPION' shows us Daddy Yankee in all his splendor as what he is, a music champion, compiling many of his achievements, such as the fact that he was born in San Juan, Puerto Rico, from where, until now, he has not almost artists had come out, their longevity or having popularized the reggaeton/dembow genre.
+
+    This is the first song to come out after the intro on LEGENDADDY, Yankee's eighth studio album, starting the album with everything.",
+    music_video: "https://youtu.be/ehEYkCjbBqQ",
+  },
+  {
+    title: "REMIX",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Nekxum, OMB & JBD",
+    written_by: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "The Big Boss displays his essence of old school reggaeton in the Remix song, whose chorus 'I like the remix more than the original' alludes to a woman who has undergone surgery, having made a 'remix' of her 'original' body.",
+    music_video: "https://youtu.be/vD4JBzRkWBA",
+  },
+  {
+    title: "PASATIEMPO",
+    year: 2022,
+    artist: daddy,
+    featuring: "Myke Towers",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Play-N-Skillz & JBD",
+    written_by: "JBD, Monique Fonseca Luchese, Fred McFarlane, Allen George, OMB, Oscar Salinas, Juan Salinas, Pusho, Myke Towers & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/bR7tGiJtkN4",
+  },
+  {
+    title: "RUMBATÓN",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Eliel, Daddy Yankee & Luny",
+    written_by: "Berto “El Original”, Periquito, Joselly Adrian Rosario Andino, Eliel, OMB, Wise “The Gold Pen”, Luny & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "Rumba has always been one of Yankee's signature genres, bringing him some of his biggest hits like 'Ella Me Levantó'. In 'LEGENDADDY', on his eighth and last studio album by Daddy Yankee, he pays homage to a song by Trébol Clan, called 'Báilame'
+
+    Also bringing back Eliel, producer of songs like 'Lo Que Pasó, Pasó' and returning to love lyrics, in which Yankee invites this woman to dance with him to forget the sorrows.",
+    music_video: "https://youtu.be/t7gsVuW8AtY",
+  },
+  {
+    title: "X ÚLTIMA VEZ",
+    year: 2022,
+    artist: daddy,
+    featuring: "Bad Bunny",
+    album: legendaddy,
+    produced_by: "Daddy Yankee & Tainy",
+    written_by: "OMB, Gaby Music, Tainy, Bad Bunny & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "X ÚLTIMA VEZ unites two of the greatest exponents of the genre, Daddy Yankee and Bad Bunny, in their third collaboration as a duo, where they describe what they would do with the opportunity of one last moment with that person they so desire.
+
+    Their first song together was 'Vuelve' in 2017, marking the beginning of Bad Bunny's career. Then for Bad Bunny's second album they joined in 'La Santa' in 2020. Finally they meet on this song to say goodbye to Daddy Yankee's career before his retirement.",
+    music_video: "https://youtu.be/_ce7WX4l55A",
+  },
+  {
+    title: "PARA SIEMPRE",
+    year: 2022,
+    artist: daddy,
+    featuring: "Sech",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Dímelo Flow, Slow Mike, BK (Producer) & Jhon El Diver",
+    written_by: "Daddy Yankee, Dímelo Flow, Slow Mike, BK (Producer) & Jhon El Diver",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/6_zkJfQxjEI",
+  },
+  {
+    title: "UNO QUITAO Y OTRO PUESTO",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Nekxum, OMB & JBD",
+    written_by: "Angel Jovian Barbosa Diaz, Nekxum, OMB, Pusho & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/PhbaRsgMM9o",
+  },
+  {
+    title: "TRUQUITO",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Wiso Rivera, Daddy Yankee, Nekxum, OMB & JBD",
+    written_by: "Wiso Rivera, Angel Jovian Barbosa Diaz, Kodeina, OMB, Nekxum & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/P8EfT1eT7MI",
+  },
+  {
+    title: "EL ABUSADOR DEL ABUSADOR",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Wiso Rivera, Daddy Yankee, Nekxum, OMB & JBD",
+    written_by: "Wiso Rivera, Daddy Yankee, Nekxum, OMB & JBD",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/nq_YBzJA_X0",
+  },
+  {
+    title: "ENCHULETIAO",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Alex Killer, ​g.o.k.b & Maki Váez",
+    written_by: "Daddy Yankee, Alex Killer, ​g.o.k.b & Maki Váez",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/cDfAs04y8Ww",
+  },
+  {
+    title: "AGUA",
+    year: 2022,
+    artist: daddy,
+    featuring: "Rauw Alejandro & Nile Rodgers",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Play-N-Skillz & Scott Summers",
+    written_by: "Raúl Antonio Treviño, Reggi “El Auténtico”, Pusho, Gary Walker, David Fajardo López, Emmanuel Anene, Scott Summers, Oscar Salinas, Juan Salinas, Nile Rodgers, Rauw Alejandro & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/X_oXBZv506U",
+  },
+  {
+    title: "ZONA DEL PERREO",
+    year: 2022,
+    artist: daddy,
+    featuring: "Natti Natasha & Becky G",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Chris Jedi & Gaby Music",
+    written_by: "Chris Jedi, OMB, Rafael Pina, Gaby Music, Natti Natasha, Becky G. & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/6BguSb3Y3I4",
+  },
+  {
+    title: "HOT",
+    year: 2022,
+    artist: daddy,
+    featuring: "Pitbull",
+    album: legendaddy,
+    produced_by: "Dj Morphius, Daddy Yankee, Play-N-Skillz, Scott Summers & Muzik Junkies",
+    written_by: "Héctor Mauricio Martínez Herrera, Jorge Quintero Jr., OMB, Scott Summers, Oscar Salinas, Juan Salinas, Pitbull & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "'HOT' is the fourteenth song from Daddy Yankee's latest studio album, 'LEGENDADDY'. The song was released alongside the album and a music video on March 24, 2022, marking the third collaboration between Yankee and Cuban Pitbull, after de Gasolina (Remix) and Don't Treat It.
+
+    The track brings back the electronic sound reminiscent of the Yankee from the early 2010s, with albums like Prestige, a characteristic Pitbull sound but one that Yankee seemed to have forgotten about.",
+    music_video: "https://youtu.be/B5PLNv4Nc4o",
+  },
+  {
+    title: "LA OLA",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Dímelo Flow, Slow Mike & BK (Producer)",
+    written_by: "BCA, ‌iZaak, BK (Producer), Slow Mike, Dímelo Flow, Justin Quiles & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/HihDARG278U",
+  },
+  {
+    title: "BOMBÓN",
+    year: 2022,
+    artist: daddy,
+    featuring: "El Alfa & Lil Jon",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Play-N-Skillz & Scott Summers",
+    written_by: "Rafael Ruiz, Antonio Romero Monge, OMB, Scott Summers, Oscar Salinas, Juan Salinas, Lil Jon, El Alfa & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "'BOMBÓN' is the sixteenth song from LEGENDADDY, Daddy Yankee's eighth studio album, together with rappers El Alfa 'El Jefe', from the Dominican Republic, and Lil Jon, from the United States.
+
+    The song belongs to the 'Dembow' genre, very characteristic of El Alfa, but with the addition of Lil Jon, who, although he had already participated in the Gasolina remix years ago, was never very close to the genre.
+
+    The lyrics are nothing to write home about, they are simply Yankee, El Alfa and Jon singing and rapping about a woman's buttocks that seem to be perfect, a 'bonbon'.
+
+    The song had a music video released at the same time as the album, on March 24, 2022.",
+    music_video: "https://youtu.be/55sOQtVd2uA",
+  },
+  {
+    title: "EL REY DE LO IMPERFECTO",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Play-N-Skillz & Scott Summers",
+    written_by: "Emmanuel Anene, Kodeina, Scott Summers, Oscar Salinas, Juan Salinas & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/AcKCVi-8VQg",
+  },
+  {
+    title: "IMPARES",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Nekxum, OMB & JBD",
+    written_by: "Angel Jovian Barbosa Diaz, OMB, Nekxum, Kodeina & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/s0JIJwQx2-s",
+  },
+  {
+    title: "BLOKE",
+    year: 2022,
+    artist: daddy,
+    featuring: "",
+    album: legendaddy,
+    produced_by: "Daddy Yankee, Luny, Blu Rey, OMB & JBD",
+    written_by: "Phillip Smart, Patrick Thompson, OMB, Christian Ramirez, Blu Rey, Luny & Daddy Yankee",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F463f6a22b5094dbd2aa3a8f02fa68c40.900x900x1.png",
+    about: "",
+    music_video: "https://youtu.be/WFote7QFTAQ",
+  },
+  {
+    title: "Intro",
+    year: 2019,
+    artist: romeo,
+    featuring: "",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Paco Cepero & Ignacio Román",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "Intro to Utopia album",
+    music_video: "https://youtu.be/vCAcj0FE9H4",
+  },
+  {
+    title: "Canalla",
+    year: 2019,
+    artist: romeo,
+    featuring: "El Chaval de la Bachata",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba & Romeo Santos",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/8zcZC4HVr68",
+  },
+  {
+    title: "Payasos",
+    year: 2019,
+    artist: romeo,
+    featuring: "Frank Reyes",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/CkNSGnekpBA",
+  },
+  {
+    title: "La Demanda",
+    year: 2019,
+    artist: romeo,
+    featuring: "Raulín Rodríguez",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/cOy4siyFp0U",
+  },
+  {
+    title: "Millionario",
+    year: 2019,
+    artist: romeo,
+    featuring: "Elvis Martinez",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "The theme of this song, unrequited love due to lack of money, is a repetition of the same theme of the very popular song sung by Elvis Martínez, entitled 'Directo Al Corazón'.
+
+    In addition, that bachata that he released in 1998 is the bachata version of the original song by Pepe Aguilar entitled 'Directo Al Corazón'.",
+    music_video: "https://youtu.be/9xF5dvFmNcU",
+  },
+  {
+    title: "El Beso Que No Le Di",
+    year: 2019,
+    artist: romeo,
+    featuring: "Kiko Rodriguez",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/exW9PGRGonk",
+  },
+  {
+    title: "Ileso",
+    year: 2019,
+    artist: romeo,
+    featuring: "Teodoro Reyes",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/yjdHGmRKz08",
+  },
+  {
+    title: "Amor Enterrado",
+    year: 2019,
+    artist: romeo,
+    featuring: "Joe Veras",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Phillip “Taj” Jackson, Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/y_NIPfqzf78",
+  },
+  {
+    title: "Me Quedo",
+    year: 2019,
+    artist: romeo,
+    featuring: "Zacarías Ferreira",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/oLBTkf7jm0Q",
+  },
+  {
+    title: "Los Últimos",
+    year: 2019,
+    artist: romeo,
+    featuring: "Luis Vargas",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/2aZeb5709TE",
+  },
+  {
+    title: "Años Luz",
+    year: 2019,
+    artist: romeo,
+    featuring: "Monchy & Alexandra",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Phillip “Taj” Jackson, Alexander “Chichi” Caba, Romeo Santos & Joaquín Díaz",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2Ff6ebbf01a749781484ca1b8e25583c99.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/ZlXPuY9uHL4",
+  },
+  {
+    title: "Inmortal",
+    year: 2018,
+    artist: romeo,
+    featuring: "",
+    album: utopia,
+    produced_by: "Romeo Santos",
+    written_by: "Alexander “Chichi” Caba & Romeo Santos",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F424b6a8ed75ec8da2002e6840f2c3456.971x971x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/XlmaJ-yU46U",
+  },
+  {
+    title: "Nibiri",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Alex Killer & Gaby Metalico",
+    written_by: "Alex Killer, Hi Music Hi Flow, Gaby Metalico & Ozuna",
+    image: "https://t2.genius.com/unsafe/223x223/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "'Nibiru' is chapter three of the chapters that Ozuna has been mentioning with the release of his songs, carrying a story of how and what Nibiru is. It should be noted that the story begins with the release of 'Fantasia', a song that was released hours before the album and is later followed by 'Hasta Que Salga El Sol'.
+
+    In the 'Nibiru' video, Ozuna is swimming in the water when suddenly the sirens help him to the top. He comes out of the water into a huge stone cave. He examines his surroundings and is surrounded by rocks, he begins to see alien figures coming out of the cave walls. Ozuna enters one of the caves while these figures dance around him following him on his journey. In an epic reveal, he reaches the end of the cave corridor when a massive black hole appears and without warning, he is pulled in by a gravitational pull.",
+    music_video: "https://youtu.be/cCmOTYnebok",
+  },
+  {
+    title: "Hasta Que Salga El Sol",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Hi Music Hi Flow & Mally Mall",
+    written_by: "Ozuna & Hi Music Hi Flow",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F1fcb5113f575e1bb506719db41c8b49c.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/8-BNyX1DOSo",
+  },
+  {
+    title: "Temporal",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Wilberto Rodríguez Torres",
+    album: nibiru,
+    produced_by: "Carlos Mercader, YoFred & Alex Killer",
+    written_by: "YoFred, Alex Killer, Hi Music Hi Flow, Carlos Mercader, Wilberto Rodríguez Torres & Ozuna",
+    image: "https://t2.genius.com/unsafe/246x246/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/uP4UuLu2HCw",
+  },
+  {
+    title: "Fantasía",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Hi Music Hi Flow, Chris Jedi & Gaby Music",
+    written_by: "Dulce Como Candy, Dímelo Ninow, Wichi, Gaby Music, Jose Ortiz Rivera, Chris Jedi, Dynell & Ozuna",
+    image: "https://t2.genius.com/unsafe/239x239/https%3A%2F%2Fimages.genius.com%2Fa7183a2fca5fa4c2b4e52e9c2edee769.1000x1000x1.jpg",
+    about: "'Fantasia' is the third single from Nibiru. This was released hours before the release of the album and indicates that it is the first chapter of a story led by Ozuna since the release of 'Hasta Que Salga El Sol'.
+
+    A description of the plot is given in the official video:
+
+    A violent storm of wind, dust and smoke hits a dystopian city. We find Ozuna looking out the window at the city as the world explodes below. Huge dust storms reach their home planet. Ozuna turns around and discovers that his wife's face and hair have turned into galaxies. The stars that make up his wife's body begin to explode one by one until she completely disappears. He knows where he has to go. Ozuna begins his journey through the streets and finds his space bike. As he travels, the city begins to explode, destroyed by the storm and lightning. When the light comes, it clears up and he finds a spaceship, Ozuna gets on it and begins his journey, his journey to Nibiru (a fictional place in space).
+
+    The story continues in 'Hasta Que Salga El Sol', chapter two of this mini-series.",
+    music_video: "https://youtu.be/lYwzpYh7dio",
+  },
+  {
+    title: "Yo Tengo Una Gata",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Sech",
+    album: nibiru,
+    produced_by: "Dímelo Flow",
+    written_by: "Mariah Mendez, Rike Music, Dímelo Flow, Lalo Ebratt, Camilo Santiago Vasquez, Sech & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/Hl3uuDNu2PU",
+  },
+  {
+    title: "Fuego",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Fino Como El Haze",
+    written_by: "Taiko, Ammu-Nation, Jhay Cortez, Botlok, Fino Como El Haze & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/MHrDFb6MkuM",
+  },
+  {
+    title: "Eres Top",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Diddy & DJ Snake",
+    album: nibiru,
+    produced_by: "DJ Snake",
+    written_by: "Cainon Lamb, Bigg D, Steven Q-Beatz, Dizzycleanface, DJ Snake, Taurian Stropshire, Wax, Mario Winans, Diddy, Chauncey Lamont Hawkins, Gotay “El Autentiko” & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/jNKnxO7wAeU",
+  },
+  {
+    title: "Pégate",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Alex Killer, Hi Music Hi Flow & Carlos Mercader",
+    written_by: "Hi Music Hi Flow, Carlos Mercader & Ozuna",
+    image: "https://t2.genius.com/unsafe/230x230/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/xmMoKlY_974",
+  },
+  {
+    title: "Patek",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Anuel AA & Snoop Dogg",
+    album: nibiru,
+    produced_by: "Jowny Boom Boom, Hydro, DJ Luian & Mambo Kingz",
+    written_by: "Sean Olascoaga, DJ Luian, Jowny Boom Boom, Hydro, Anuel AA, Snoop Dogg, Mambo Kingz & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/77thQpHZNKA",
+  },
+  {
+    title: "Difícil Olvidar",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "YannC El Armónico",
+    written_by: "Hi Music Hi Flow, YannC El Armónico & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/hQZ6eJTkWgw",
+  },
+  {
+    title: "Sin Pensar",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Swae Lee",
+    album: nibiru,
+    produced_by: "Hi Music Hi Flow, Jowny Boom Boom, Hydro, DJ Luian & Mambo Kingz",
+    written_by: "Hi Music Hi Flow, DJ Luian, Jowny Boom Boom, Hydro, Mambo Kingz, Swae Lee & Ozuna",
+    image: "https://t2.genius.com/unsafe/252x252/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/MB2E7mpi1Go",
+  },
+  {
+    title: "Independiente",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "YannC El Armónico",
+    written_by: "Hi Music Hi Flow, YannC El Armónico, Ozuna & Gotay “El Autentiko”",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/PVhkcN2LZE0",
+  },
+  {
+    title: "Reggaetón en París",
+    year: 2019,
+    artist: ozuna,
+    featuring: "Dalex & Nicky Jam",
+    album: nibiru,
+    produced_by: "High P & Dímelo Flow",
+    written_by: "uan Diego Medina, Joshua Mendez, Dímelo Flow, Henri Pierre Gustin, Dalex, Nicky Jam & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/e6XoVWiR5VU",
+  },
+  {
+    title: "Te Soñé de Nuevo",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Hi Music Hi Flow, DJ Luian, Mambo Kingz, Jowny Boom Boom & Hydro",
+    written_by: "Vicente Saavedra & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F648a880d67c4a7f3db61711aae768ec2.1000x1000x1.jpg",
+    about: "Two days after the song 'Genuine Love', Ozuna releases the video clip for 'Te Soñé de Nuevo', also from his third album Nibiru.
+
+    In the song he tells of the dreams he had with a girl with whom he is only friends, but both are sexually attracted.",
+    music_video: "https://youtu.be/eKaD_-Tl544",
+  },
+  {
+    title: "Danzau",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Shndō, Mally Mall, Jencarlos, O'Neill, JonTheProducer & Bory",
+    written_by: "Yamil Aldanondo Ortega, O'Neill, Hi Music Hi Flow, JonTheProducer, Ozuna, Mally Mall & Eric Duars",
+    image: "https://t2.genius.com/unsafe/233x233/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/UGB-R5f9Bps",
+  },
+  {
+    title: "Amor Genuino",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Hi Music Hi Flow, Hydro, Alex Killer, Mambo Kingz & YoFred",
+    written_by: "YoFred, Weezy Kingz, Xavier Semper, DJ Luian, Hydro, Alex Killer, Ozuna & Vicente Saavedra",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F3d229a72f56524e7cc63a237689f43c4.1000x1000x1.jpg",
+    about: "'Genuine Love' is a ballad from Ozuna's third studio album, Nibiru. The theme, as its name suggests, narrates how it feels to be separated from that person whom you love so much, but whom you did not know how to love.
+
+    The Puerto Rican asked his fans what title he could give the song on May 31, 2019 through a post on his Instagram. On June 2, he posted another advance saying that he wanted to release the song that week, but his record label didn't want it. Three days later, on Tuesday, June 4, he publishes it.",
+    music_video: "https://youtu.be/jQkJMutvYkA",
+  },
+  {
+    title: "Baila Baila Baila",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Mambo Kingz, DJ Luian, Jowny Boom Boom & Hydro",
+    written_by: "BF, Jowny Boom Boom, Vicente Saavedra, Hydro, Xavier Semper, Weezy Kingz, DJ Luian & Ozuna",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fe3bdcb2cd2237e431947bef9b2968433.1000x1000x1.jpg",
+    about: "'Baila Baila Baila' is the second single from Ozuna's third album, called Nibiru. In this topic, we talk about a girl who distanced herself from love because she was treated badly in her old relationship; however, Ozuna wants her to forget her bad experiences, making her feel like no one ever did before.",
+    music_video: "https://youtu.be/32F2d-wj4Xw",
+  },
+  {
+    title: "Qué Pena",
+    year: 2019,
+    artist: ozuna,
+    featuring: "",
+    album: nibiru,
+    produced_by: "Yazid Rivera, Hi Music Hi Flow, Eliel & HACHE",
+    written_by: "HACHE & Ozuna",
+    image: "https://t2.genius.com/unsafe/249x249/https%3A%2F%2Fimages.genius.com%2F52ba8c8fdff29140de862690e8cabfa8.999x999x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/oHLAH3goNJ0",
+  },
+  {
+    title: "la luna enamorada",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Josh Crocker",
+    written_by: "Kali Uchis & Luis Chanivecky",
+    image: "https://media.pitchfork.com/photos/5fb551797e818f7ad25ead3c/1:1/w_320,c_limit/Sin%20Miedo%20(del%20Amor%20y%20Otros%20Demonios)%20%E2%88%9E_Kali%20Uchis.jpg",
+    about: "As the opener for Kali Uchis's sophomore studio album, “la luna enamorada” is a descriptive poem on the feeling of love and its effect.",
+    music_video: "https://youtu.be/49qnOZNuUmo",
+  },
+  {
+    title: "fue mejor",
+    year: 2020,
+    artist: kali,
+    featuring: "PARTYNEXTDOOR",
+    album: sin_miedo,
+    produced_by: "Ray “Quasi” Nelson, Josh Crocker & Jahaan Sweet",
+    written_by: "Ray “Quasi” Nelson, ELENA ROSE, Jahaan Sweet, Kali Uchis & PARTYNEXTDOOR",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "https://youtu.be/Bfgy3ei3qg4",
+  },
+  {
+    title: "//aguardiente y limón %ᵕ‿‿ᵕ%",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Rogét Chahayed, Ricky Reed & Sounwave",
+    written_by: "Rogét Chahayed, Ricky Reed, Sounwave & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "https://youtu.be/zPAdAjejTMQ",
+  },
+  {
+    title: "vaya con dios",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Josh Crocker",
+    written_by: "Josh Crocker & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "Kali sings to a lover who is about to leave —hence the name of the song— but still she wishes blessings and keeps trying to stay positive facing her situation even though the damages the other person left.
+
+    'vaya con dios' is a Spanish phrase meant as farewell. It literally translates to 'go with God'. It's normally used in religious or in very dramatic contexts such as when someone says goodbye to someone who is about to go on a long, dangerous journey. That's why she says 'No sé si lo volveré a ver' which means 'I don't know if I'll ever see you again'
+
+    An English equivalent may be “godspeed” or 'may God be with you'",
+    music_video: "https://youtu.be/wdUpkhBNeI8",
+  },
+  {
+    title: "que te pedí//",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Josh Crocker",
+    written_by: "Gabriel Luna de la Fuente & Fernando Mulens López",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "“que te pedí//” is a cover of “Qué te pedí” by Cuban singer La Lupe. In the cover, Kali Uchis pays homage to one of her childhood icons, telling Remezcla:
+
+    I'm big on paying homage to artists who inspire me and are also a part of my upbringing […] it was just a song that really is really, really touching and it's really striking. As soon as you hear La Lupe sing it, it just touches a chord. And I really wanted to invoke some type of emotion.
+
+    Kali first performed the cover during her 2020 Lollapalooza performance.",
+    music_video: "https://youtu.be/7lW2MiCtseE",
+  },
+  {
+    title: "quiero sentirme bien",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Kurtis McKenzie & Erik Bodin",
+    written_by: "Yukimi Nagano, Erik Bodin, Kurtis McKenzie & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "",
+  },
+  {
+    title: "telepatía",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Albert Hype, Manuel Lara & Tainy",
+    written_by: "Tainy, Albert Hype, Manuel Lara, Servando Primera, Cris Chil & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "I wrote this song about spiritually being with someone I physically couldn’t & while making it i sent telepathic healing love to all
+
+    Many say it transfers seratonin/love they can physically feel, because this song heals & makes you a better human being",
+    music_video: "https://youtu.be/lm-arr5RRaM",
+  },
+  {
+    title: "no eres tu(soy yo)",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Tainy",
+    written_by: "Tainy, Manuel Lara, JonTheProducer, Luis Figueroa, Cris Chil & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "https://youtu.be/LrHBKPYnw9I",
+  },
+  {
+    title: "de nadie",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Supa Dups, Manuel Lara & Tainy",
+    written_by: "Supa Dups, Tainy, Manuel Lara, Joan Ortíz, Cris Chil & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "https://youtu.be/7nLMyfINl6Q",
+  },
+  {
+    title: "​¡aquí yo mando!",
+    year: 2020,
+    artist: kali,
+    featuring: "Rico Nasty",
+    album: sin_miedo,
+    produced_by: "Albert Hype, JonTheProducer, RVNES & Tainy",
+    written_by: "Servando Primera, Tainy, JonTheProducer, RVNES, Cris Chil, Albert Hype, Rico Nasty & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2F7a6168a09a2f4cdaa7daf00d734253fb.1000x1000x1.png",
+    about: "'I rule here!' tells the desires of a woman who wants to dominate her partner in every aspect of their relationship. Played by Kali Uchis and Rico Nasty, she explains that he can get used to her style, if not he can get away from her.
+
+    The song is the first collaboration between the two artists and could be part of Kali Uchis's second studio album, the date of which she herself hinted at in a comment on the official video premiere.",
+    music_video: "https://youtu.be/RQqJeIyyQBs",
+  },
+  {
+    title: "te pongo mal(prendelo)",
+    year: 2020,
+    artist: kali,
+    featuring: "Jowell Y Randy",
+    album: sin_miedo,
+    produced_by: "te pongo mal(prendelo)",
+    written_by: "Bad Bunny, Randy, Jowell, Cris Chil, Fuego, Tainy, Manuel Lara & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fb53b582365ab927e7014c26446042b8f.300x300x1.png",
+    about: "",
+    music_video: "https://youtu.be/i2YQDndmwbM",
+  },
+  {
+    title: "la luz(Fín)",
+    year: 2020,
+    artist: kali,
+    featuring: "Jhay Cortez",
+    album: sin_miedo,
+    produced_by: "Tainy",
+    written_by: "Tainy, Jhay Cortez & Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Ff7c15ee84a933ed5b5abb464ae6a2cb6.1000x1000x1.jpg",
+    about: "",
+    music_video: "https://youtu.be/5KJDlLvjoHQ",
+  },
+  {
+    title: "ángel sin cielo",
+    year: 2020,
+    artist: kali,
+    featuring: "",
+    album: sin_miedo,
+    produced_by: "Kali Uchis",
+    written_by: "Kali Uchis",
+    image: "https://t2.genius.com/unsafe/270x270/https%3A%2F%2Fimages.genius.com%2Fa99e2dba01ed0bfa7de816858808a3ca.1000x1000x1.png",
+    about: "",
+    music_video: "https://youtu.be/mlz-1NtSpKE",
   }
 ];
 
+songs.each do |o|
+  Song.create(title: o[:title], year: o[:year], artist: o[:artist], featuring: o[:featuring], album: o[:album], produced_by: o[:produced_by], written_by: o[:written_by], image: o[:image], about: o[:about], music_video: o[:music_video])
+  end
 
 
