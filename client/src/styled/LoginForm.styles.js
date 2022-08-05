@@ -5,6 +5,8 @@ export const SignInContainer = styled.div`
   flex-direction : column;
   display: flex;
   width: 100%;
+  text-align: center;
+  align-items: center;
 
   .form {
     width: 25%;

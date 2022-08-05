@@ -5,6 +5,7 @@ export const SignUpContainer = styled.div`
   flex-direction: column;
   display: flex;
   width: 100%;
+  
 
   h1 {
     align-self: center;
@@ -24,7 +25,7 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 const shrinkLabelStyles = css`
-  top: -14px;
+  top: -24px;
   font-size: 12px;
   color: ${mainColor};
 `;
