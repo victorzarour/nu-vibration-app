@@ -6,6 +6,7 @@ import "./SongRow.css";
 const SongRow = ( { song, artist, currentUser } ) => {
 
     const [videoUrl, setVideoUrl] = useState("")
+    const [liked, setLiked] = useState(false)
 
     const opts = {
         height: '350',
@@ -41,7 +42,12 @@ const SongRow = ( { song, artist, currentUser } ) => {
           },
           body: JSON.stringify(formData)
         })
+        setLiked(true)
       }
+
+      let destructuredIds  
+
+      currentUser ? destructuredIds = currentUser.user_songs.map(userSong => userSong.song).map(userSong => userSong.id) : destructuredIds = []
     
 
     return (
@@ -53,7 +59,17 @@ const SongRow = ( { song, artist, currentUser } ) => {
             </NavLink>
 
             <i class="fa-solid fa-play" onClick={() => handleClick(song)}></i>
-            <i class="fa-solid fa-heart" onClick={handleAddSong}></i>
+
+            {currentUser ? 
+          
+            destructuredIds.indexOf(song.id) !== -1 || liked ? <i class="fa-solid fa-heart albumheart liked" onClick={handleAddSong}></i> : <i class="fa-solid fa-heart albumheart" onClick={handleAddSong}></i> 
+
+            :
+
+            null
+          
+            }
+
             
             {videoUrl && <YouTube videoId={videoUrl} opts={opts} className="music_video"/>}
 

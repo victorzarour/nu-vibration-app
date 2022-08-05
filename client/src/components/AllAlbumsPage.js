@@ -1,5 +1,6 @@
 import AlbumThumbnail from "./AlbumThumbnail";
 import "./AlbumThumbnail.css";
+import { useEffect } from 'react';
 
 
 const AllAlbumsPage = ( { currentUser, handleSearch, search, allAlbums }) => {

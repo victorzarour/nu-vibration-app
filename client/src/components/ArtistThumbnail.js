@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./ArtistThumbnail.css"
 
 const ArtistThumbnail = ( { artist, currentUser } ) => {
+
+  const [liked, setLiked] = useState(false)
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -22,7 +25,13 @@ const ArtistThumbnail = ( { artist, currentUser } ) => {
       },
       body: JSON.stringify(formData)
     })
+    setLiked(true)
   }
+
+  let destructuredIds  
+
+  currentUser ? destructuredIds = currentUser.user_artists.map(userArtist => userArtist.artist).map(userArtist => userArtist.id) : destructuredIds = []
+
 
   return (
     <div className="artist_thumbnail_container">
@@ -41,7 +50,17 @@ const ArtistThumbnail = ( { artist, currentUser } ) => {
       </div>
       
       <div className="column_two_artist">
-        { currentUser ? <i class="fa-solid fa-heart" onClick={handleAddArtist}></i> : null }
+
+        {currentUser ? 
+            
+            destructuredIds.indexOf(artist.id) !== -1 || liked ? <i class="fa-solid fa-heart albumheart liked" onClick={handleAddArtist}></i> : <i class="fa-solid fa-heart albumheart" onClick={handleAddArtist}></i> 
+
+            :
+
+            null
+        
+          }
+
       </div>
     
       </div>
