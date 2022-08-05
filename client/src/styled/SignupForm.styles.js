@@ -1,13 +1,24 @@
 import styled, { css } from 'styled-components';
 
 export const SignUpContainer = styled.div`
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 380px;
-  h2 {
-    margin: 10px 0;
+  display: flex;
+  width: 100%;
+
+  h1 {
+    align-self: center;
   }
+
+  .signUpForm {
+    width: 50%;
+    align-self: center;
+  }
+
 `;
+
+
+
 
 const subColor = 'grey';
 const mainColor = 'black';

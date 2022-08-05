@@ -47,7 +47,9 @@ const LoginForm = ({ setCurrentUser }) => {
 
   return (
     <SignInContainer>
-      <form onSubmit={ handleSubmit }>
+      <form className="form" onSubmit={ handleSubmit }>
+        <h1>Welcome back!</h1>
+        <span>Login to continue</span>
         <FormInput
         label="Username"
         type="text"

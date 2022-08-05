@@ -10,10 +10,6 @@ class UsersController < ApplicationController
     render json: user, status: :created
   end
 
-  def user_user_albums
-    render json: current_user.user_user_albums, status: :ok
-  end
-
   private
 
   def user_params

@@ -52,7 +52,7 @@ function SongVideoForm( { id, currentUser, addSongVideos } ) {
 
 
           <div> 
-            <textarea className='textarea' id="comments" name="comments" placeholder="Comments..." value={formData.comments} onChange={handleChange} style={{height:100}}></textarea>
+            <textarea className='textarea' id="comments" name="comments" placeholder="Comments..." value={formData.comments} onChange={handleChange} style={{height:80, width:380}}></textarea>
           </div>
 
           <button className='sub-btn' type="submit">Submit</button>

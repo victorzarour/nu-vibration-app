@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./AlbumThumbnail.css"
 
@@ -7,6 +7,7 @@ const AlbumThumbnail = ( { album, currentUser } ) => {
   const { id, image, title } = album
 
   const [liked, setLiked] = useState(false)
+  const [userAlbums, setUserAlbums] = useState([])
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -26,7 +27,6 @@ const AlbumThumbnail = ( { album, currentUser } ) => {
       },
       body: JSON.stringify(formData)
     })
-
     setLiked(true)
   }
 

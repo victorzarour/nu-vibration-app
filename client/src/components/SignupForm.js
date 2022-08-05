@@ -4,7 +4,7 @@ import { FormInput } from "./FormInput";
 import { Button } from "./Button";
 import { SignUpContainer } from "../styled/SignupForm.styles";
 
-const SignupForm = () => {
+const SignupForm = ( {setCurrentUser} ) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -33,6 +33,7 @@ const SignupForm = () => {
     }).then((response) => {
       if (response.ok) {
         response.json().then((user) => {
+          setCurrentUser(user)
           history.push(`/`);
         });
       } else {
@@ -49,9 +50,10 @@ const SignupForm = () => {
 
   return (
     <SignUpContainer>
-      <h2>Don't have an account?</h2>
-      <span>Sign up with your email and password</span>
-      <form onSubmit={ handleSubmit }>
+      <form className="signUpForm" onSubmit={ handleSubmit }>
+        <h1>Don't have an account?</h1>
+        <span>Create an account your email and password</span>
+
 
         <FormInput
           label='Username'
@@ -89,7 +91,7 @@ const SignupForm = () => {
           value={ confirmPassword }
         />
 
-        <Button type='submit'>Sign Up</Button>
+        <Button type='submit'>Create Account</Button>
       </form>
 
     </SignUpContainer>
