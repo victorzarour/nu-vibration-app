@@ -41,7 +41,7 @@ User are be able to:
 
 ## Setup
 
-To setup the app, first fork and cd into the directory, then run:
+To setup the app, fork and cd into the directory, then run:
 
 ```
 bundle install
