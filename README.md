@@ -4,7 +4,7 @@
 
 ## OVERVIEW
 
-NuVibration is a music website where users can explore their favorite music videos, and, if they sign up for an account, can also add covers or live versions of their favorite songs.
+NuVibration is a music app where users can explore their favorite music videos, and, if they sign up for an account, can also add covers or live versions of their favorite songs.
 
 The app is currently deployed here: https://releasethewiggle.herokuapp.com/
 
