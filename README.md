@@ -8,7 +8,7 @@ NuVibration is a music app where users can explore their favorite music videos, 
 
 The app is currently deployed here: https://releasethewiggle.herokuapp.com/
 
-You can also find a demo here: https://www.linkedin.com/posts/victorzarour_softwareengineer-developer-reactjs-activity-6961407246501089280-ofIK?utm_source=share&utm_medium=member_desktop
+You can find a demo here: https://www.linkedin.com/posts/victorzarour_softwareengineer-developer-reactjs-activity-6961407246501089280-ofIK?utm_source=share&utm_medium=member_desktop
 
 ![NuVibration  HomePage](https://user-images.githubusercontent.com/79528112/189636827-ace865b3-d704-4ad6-9395-c16482de2dd6.JPG)
 
